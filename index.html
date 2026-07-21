@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naima Mahdi — Software Developer & Graphic Designer</title>
+<title>Naima Mahdi — Forex Trader & Founder, Naima's School</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -223,6 +223,12 @@ nav{
   font-family:'JetBrains Mono',monospace;
 }
 
+/* ---------- Classroom banner ---------- */
+.classroom-banner{padding:70px 0;}
+.classroom-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:50px;align-items:center;}
+.classroom-visual{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);}
+.classroom-visual svg{width:100%;height:auto;display:block;}
+
 /* ---------- Skills ---------- */
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
 .skill-card{
@@ -255,7 +261,7 @@ nav{
 }
 .project-thumb::after{content:"";position:absolute;inset:0;background:rgba(10,26,51,0.0);transition:background .3s ease;}
 .project-card:hover .project-thumb::after{background:rgba(10,26,51,0.12);}
-.project-thumb svg{width:64px;height:64px;opacity:0.85;transition:transform .4s ease;}
+.project-thumb svg{width:104px;height:60px;opacity:0.9;transition:transform .4s ease;}
 .project-card:hover .project-thumb svg{transform:scale(1.12) rotate(-4deg);}
 .pt-1{background:linear-gradient(135deg,#2563eb,#0a1a33);}
 .pt-2{background:linear-gradient(135deg,#06b6d4,#2563eb);}
@@ -381,7 +387,7 @@ footer{
 
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
-  .hero-grid, .about-grid, .contact-grid{grid-template-columns:1fr;}
+  .hero-grid, .about-grid, .contact-grid, .classroom-grid{grid-template-columns:1fr;}
   .hero-visual{order:-1;margin-bottom:20px;}
   .project-grid, .skills-grid, .edu-grid, .testi-grid{grid-template-columns:1fr 1fr;}
 }
@@ -410,11 +416,11 @@ footer{
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#courses">Courses</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      <li><a href="#contact" class="nav-cta">Join a Class</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </nav>
@@ -424,12 +430,12 @@ footer{
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Software Developer · Graphic Designer</span>
-      <h1>Building clean code and <span class="accent">crafting bold visuals.</span></h1>
-      <p>I'm Naima Mahdi — I design and develop digital experiences that are as functional as they are beautiful. From full-stack applications to brand identities, I turn ideas into polished, purposeful work.</p>
+      <span class="eyebrow">Forex Trader · Founder, Naima's School</span>
+      <h1>Trading the markets. <span class="accent">Teaching the next generation.</span></h1>
+      <p>I'm Naima Mahdi — a forex trader with 6 years in the markets, and founder of Naima's School, where I teach Somali girls and women forex and general trading concepts, from candlestick patterns to full trading strategies.</p>
       <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">
-          View My Work
+        <a href="#courses" class="btn btn-primary">
+          Explore My Courses
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a href="#" class="btn btn-outline" id="cvBtn" download="Naima-Mahdi-CV.pdf">
@@ -493,8 +499,8 @@ footer{
           </svg>
         </div>
       </div>
-      <div class="badge-float badge-1"><span class="badge-dot"></span>Available for freelance</div>
-      <div class="badge-float badge-2"><span class="badge-dot"></span>3+ yrs experience</div>
+      <div class="badge-float badge-1"><span class="badge-dot"></span>Founder, Naima's School</div>
+      <div class="badge-float badge-2"><span class="badge-dot"></span>6 yrs trading experience</div>
     </div>
   </div>
 </section>
@@ -504,23 +510,119 @@ footer{
   <div class="container">
     <div class="about-grid reveal">
       <div class="about-visual">
-        <div class="about-stat"><strong>30+</strong><span>Projects delivered</span></div>
-        <div class="about-stat"><strong>12</strong><span>Happy clients & teams</span></div>
-        <div class="about-stat"><strong>3+</strong><span>Years of experience</span></div>
+        <div class="about-stat"><strong>6+</strong><span>Years trading the markets</span></div>
+        <div class="about-stat"><strong>500+</strong><span>Students taught</span></div>
+        <div class="about-stat"><strong>1</strong><span>School built from scratch</span></div>
       </div>
       <div class="about-body">
         <span class="eyebrow">About Me</span>
-        <h2 style="font-size:clamp(26px,3vw,34px);color:var(--navy);margin-bottom:18px;">Where logic meets creativity</h2>
-        <p>I'm a <strong>software developer and graphic designer</strong> who believes the best digital products are built at the intersection of clean engineering and thoughtful design. I spend my days writing maintainable code and my nights sketching layouts, type systems, and brand concepts.</p>
-        <p>My path started in visual design, which taught me to think in hierarchy, contrast, and story. Development gave me the tools to bring those ideas to life — fully interactive, responsive, and built to last. Today I move fluidly between Figma and my code editor, often on the same project.</p>
-        <p>When I'm not designing or building, I'm mentoring junior developers, exploring new design trends, or sketching out my next side project.</p>
+        <h2 style="font-size:clamp(26px,3vw,34px);color:var(--navy);margin-bottom:18px;">Where the charts meet the classroom</h2>
+        <p>I'm a <strong>forex trader with 6 years of experience</strong> reading price action, managing risk, and navigating the currency markets. Over the years, trading stopped being just my job — it became something I wanted to hand down.</p>
+        <p>That's why I founded <strong>Naima's School</strong>, a learning space where I teach fellow Somali girls and women forex and general trading concepts — from reading candlestick charts to building a full trading strategy and managing risk like a professional.</p>
+        <p>When I'm not analyzing charts, I'm building lessons, running live classes, and watching my students place their first confident trades.</p>
         <div class="about-tags">
-          <span class="tag">Problem Solver</span>
-          <span class="tag">Detail-Oriented</span>
-          <span class="tag">Collaborative</span>
-          <span class="tag">Lifelong Learner</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Technical Analysis</span>
+          <span class="tag">Mentorship</span>
+          <span class="tag">Community Building</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSROOM BANNER -->
+<section class="classroom-banner">
+  <div class="container classroom-grid">
+    <div class="classroom-text reveal">
+      <span class="eyebrow">Inside Naima's School</span>
+      <h2 style="font-size:clamp(24px,3vw,32px);color:var(--navy);margin-bottom:14px;">Real charts. Real classes. Real trades.</h2>
+      <p style="color:var(--ink-soft);font-size:16px;">Every class starts with the chart on the screen — reading candlestick patterns, marking support and resistance, and walking through live setups together. Students leave each session with a strategy they actually understand, not just a rule to memorize.</p>
+    </div>
+    <div class="classroom-visual reveal">
+      <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a trading class with a candlestick chart on a whiteboard and students seated in front">
+        <defs>
+          <linearGradient id="roomBg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#eef4fd"/>
+            <stop offset="100%" stop-color="#dce8fb"/>
+          </linearGradient>
+          <linearGradient id="boardGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0a1a33"/>
+            <stop offset="100%" stop-color="#12294f"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="320" rx="20" fill="url(#roomBg)"/>
+
+        <!-- whiteboard / screen -->
+        <rect x="60" y="34" width="360" height="150" rx="10" fill="url(#boardGrad)"/>
+        <rect x="60" y="34" width="360" height="150" rx="10" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.4"/>
+
+        <!-- candlestick chart on board -->
+        <g stroke-width="2.5">
+          <line x1="90" y1="90" x2="90" y2="150" stroke="#3b82f6"/>
+          <rect x="84" y="112" width="12" height="26" fill="#3b82f6"/>
+
+          <line x1="120" y1="70" x2="120" y2="120" stroke="#06b6d4"/>
+          <rect x="114" y="78" width="12" height="24" fill="none" stroke="#06b6d4"/>
+
+          <line x1="150" y1="100" x2="150" y2="160" stroke="#3b82f6"/>
+          <rect x="144" y="128" width="12" height="24" fill="#3b82f6"/>
+
+          <line x1="180" y1="60" x2="180" y2="110" stroke="#06b6d4"/>
+          <rect x="174" y="68" width="12" height="26" fill="none" stroke="#06b6d4"/>
+
+          <line x1="210" y1="85" x2="210" y2="145" stroke="#3b82f6"/>
+          <rect x="204" y="108" width="12" height="26" fill="#3b82f6"/>
+
+          <line x1="240" y1="55" x2="240" y2="105" stroke="#06b6d4"/>
+          <rect x="234" y="62" width="12" height="26" fill="none" stroke="#06b6d4"/>
+
+          <line x1="270" y1="95" x2="270" y2="155" stroke="#3b82f6"/>
+          <rect x="264" y="118" width="12" height="26" fill="#3b82f6"/>
+
+          <line x1="300" y1="65" x2="300" y2="115" stroke="#06b6d4"/>
+          <rect x="294" y="72" width="12" height="26" fill="none" stroke="#06b6d4"/>
+
+          <line x1="330" y1="90" x2="330" y2="150" stroke="#3b82f6"/>
+          <rect x="324" y="112" width="12" height="26" fill="#3b82f6"/>
+
+          <line x1="360" y1="60" x2="360" y2="112" stroke="#06b6d4"/>
+          <rect x="354" y="68" width="12" height="26" fill="none" stroke="#06b6d4"/>
+        </g>
+        <polyline points="90,130 120,95 150,140 180,88 210,120 240,80 270,132 300,90 330,128 360,85" fill="none" stroke="#f5f8fc" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
+        <text x="76" y="52" font-family="JetBrains Mono, monospace" font-size="12" fill="#9db4dd">EUR/USD · Candlestick Patterns</text>
+
+        <!-- desk -->
+        <rect x="40" y="230" width="400" height="14" rx="4" fill="#c7d7f2"/>
+
+        <!-- students (stylized hijab silhouettes, seated at desk) -->
+        <g>
+          <ellipse cx="120" cy="205" rx="26" ry="30" fill="#0a1a33"/>
+          <ellipse cx="120" cy="196" rx="17" ry="19" fill="#eccbb4"/>
+          <path d="M103 196c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#0a1a33"/>
+        </g>
+        <g>
+          <ellipse cx="200" cy="210" rx="26" ry="30" fill="#12294f"/>
+          <ellipse cx="200" cy="201" rx="17" ry="19" fill="#f4d9c6"/>
+          <path d="M183 201c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#12294f"/>
+        </g>
+        <g>
+          <ellipse cx="280" cy="204" rx="26" ry="30" fill="#0a1a33"/>
+          <ellipse cx="280" cy="195" rx="17" ry="19" fill="#eccbb4"/>
+          <path d="M263 195c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#0a1a33"/>
+        </g>
+        <g>
+          <ellipse cx="360" cy="209" rx="26" ry="30" fill="#12294f"/>
+          <ellipse cx="360" cy="200" rx="17" ry="19" fill="#f4d9c6"/>
+          <path d="M343 200c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#12294f"/>
+        </g>
+
+        <!-- laptops on desk -->
+        <rect x="100" y="222" width="30" height="10" rx="2" fill="#2563eb" opacity="0.6"/>
+        <rect x="180" y="222" width="30" height="10" rx="2" fill="#06b6d4" opacity="0.6"/>
+        <rect x="260" y="222" width="30" height="10" rx="2" fill="#2563eb" opacity="0.6"/>
+        <rect x="340" y="222" width="30" height="10" rx="2" fill="#06b6d4" opacity="0.6"/>
+      </svg>
     </div>
   </div>
 </section>
@@ -531,108 +633,108 @@ footer{
     <div class="section-head reveal">
       <span class="eyebrow">Skills</span>
       <h2>What I bring to the table</h2>
-      <p>A dual toolkit — engineering rigor paired with a designer's eye — so every project is functional, polished, and on-brand.</p>
+      <p>A dual toolkit — years of hands-on market experience paired with the patience to teach it — so every student walks away with skills they can actually use.</p>
     </div>
     <div class="skills-grid reveal">
       <div class="skill-card">
-        <h3><span class="dot"></span>Development</h3>
-        <div class="skill-row"><div class="skill-label"><span>JavaScript / TypeScript</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>React & Next.js</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Node.js & APIs</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>HTML5 & CSS3</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Databases (SQL/NoSQL)</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+        <h3><span class="dot"></span>Trading</h3>
+        <div class="skill-row"><div class="skill-label"><span>Candlestick Pattern Reading</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Technical Analysis</span><span>93%</span></div><div class="skill-bar"><div class="skill-fill" data-width="93"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Risk & Money Management</span><span>96%</span></div><div class="skill-bar"><div class="skill-fill" data-width="96"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Price Action Strategy</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Trading Psychology</span><span>88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
       </div>
       <div class="skill-card">
-        <h3><span class="dot" style="background:var(--cyan)"></span>Design</h3>
-        <div class="skill-row"><div class="skill-label"><span>UI/UX Design (Figma)</span><span>94%</span></div><div class="skill-bar"><div class="skill-fill" data-width="94"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Brand Identity</span><span>88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Adobe Photoshop / Illustrator</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Typography & Layout</span><span>91%</span></div><div class="skill-bar"><div class="skill-fill" data-width="91"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Motion & Prototyping</span><span>78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+        <h3><span class="dot" style="background:var(--cyan)"></span>Teaching</h3>
+        <div class="skill-row"><div class="skill-label"><span>Curriculum Design</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Live Class Facilitation</span><span>94%</span></div><div class="skill-bar"><div class="skill-fill" data-width="94"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Mentorship</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Community Building</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+        <div class="skill-row"><div class="skill-label"><span>Public Speaking</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="section-pad" id="projects">
+<!-- COURSES -->
+<section class="section-pad" id="courses">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Portfolio</span>
-      <h2>Selected projects</h2>
-      <p>A mix of full-stack builds and design-led work — each project solving a real problem for a real user.</p>
+      <span class="eyebrow">Naima's School</span>
+      <h2>Courses & programs</h2>
+      <p>From your very first candlestick to a full trading strategy — each program is built to take students from the classroom to their own charts, with confidence.</p>
     </div>
     <div class="project-grid reveal">
 
       <div class="project-card">
         <div class="project-thumb pt-1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg>
+          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="18" x2="8" y2="52" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="30" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="10" x2="24" y2="40" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="14" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="24" x2="40" y2="58" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="38" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="8" x2="56" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="12" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="20" x2="72" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="30" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="16" x2="104" y2="46" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="26" width="8" height="16" fill="rgba(255,255,255,0.95)"/><polyline points="8,44 24,22 40,44 56,20 72,38 88,18 104,32" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
         </div>
         <div class="project-body">
-          <div class="project-tagrow"><span>React</span><span>Node.js</span><span>Stripe</span></div>
-          <h3>Suuq — E-commerce Platform</h3>
-          <p>A full-stack storefront with real-time inventory, secure checkout, and a custom admin dashboard.</p>
-          <a href="#" class="project-link">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          <div class="project-tagrow"><span>Beginner</span><span>4 weeks</span></div>
+          <h3>Candlestick Patterns Masterclass</h3>
+          <p>Learn to read candlesticks with confidence — reversal patterns, continuation patterns, and how to spot them live on the chart.</p>
+          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-thumb pt-2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="30" x2="8" y2="56" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="40" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="20" x2="24" y2="48" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="26" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="10" x2="40" y2="38" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="16" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="4" x2="56" y2="28" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="8" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="14" x2="72" y2="40" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="20" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="2" x2="104" y2="24" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="6" width="8" height="12" fill="rgba(255,255,255,0.95)"/><polyline points="8,48 24,34 40,24 56,16 72,26 88,18 104,12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
         </div>
         <div class="project-body">
-          <div class="project-tagrow"><span>Figma</span><span>Branding</span></div>
-          <h3>Bariis Studio — Brand Identity</h3>
-          <p>Complete visual identity for a boutique catering brand — logo suite, packaging, and style guide.</p>
-          <a href="#" class="project-link">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          <div class="project-tagrow"><span>Intermediate</span><span>6 weeks</span></div>
+          <h3>Price Action Trading Strategy</h3>
+          <p>Build a complete strategy around support, resistance, and trend structure — and learn to trust your own analysis.</p>
+          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-thumb pt-3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M4 19h16M4 15l4-4 4 4 4-8 4 4"/></svg>
+          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="14" x2="8" y2="42" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="4" y="18" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="24" y1="24" x2="24" y2="54" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="20" y="36" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="40" y1="12" x2="40" y2="40" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="36" y="16" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="56" y1="26" x2="56" y2="56" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="52" y="38" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="72" y1="10" x2="72" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="68" y="14" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="88" y1="22" x2="88" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="84" y="32" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="104" y1="8" x2="104" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="100" y="12" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><polyline points="8,28 24,40 40,26 56,42 72,22 88,36 104,20" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
         </div>
         <div class="project-body">
-          <div class="project-tagrow"><span>TypeScript</span><span>D3.js</span></div>
-          <h3>Falanqee — Analytics Dashboard</h3>
-          <p>An internal analytics tool visualizing user engagement metrics for a mid-size SaaS team.</p>
-          <a href="#" class="project-link">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          <div class="project-tagrow"><span>All levels</span><span>3 weeks</span></div>
+          <h3>Risk & Money Management</h3>
+          <p>Position sizing, stop-loss placement, and protecting your account — the discipline that separates traders who last.</p>
+          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-thumb pt-4">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="20" x2="8" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="32" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="8" x2="24" y2="34" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="12" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="26" x2="40" y2="54" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="36" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="12" x2="56" y2="38" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="16" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="24" x2="72" y2="52" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="34" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="18" x2="104" y2="46" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="28" width="8" height="16" fill="rgba(255,255,255,0.95)"/><polyline points="8,40 24,20 40,44 56,24 72,42 88,16 104,36" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
         </div>
         <div class="project-body">
-          <div class="project-tagrow"><span>Next.js</span><span>CMS</span></div>
-          <h3>Aqoon — Learning Platform</h3>
-          <p>A course delivery platform with progress tracking, quizzes, and a headless CMS backend.</p>
-          <a href="#" class="project-link">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          <div class="project-tagrow"><span>Beginner</span><span>Cohort</span></div>
+          <h3>Forex Fundamentals for Beginners</h3>
+          <p>A ground-up introduction to the forex market, currency pairs, and how to open and read your first chart.</p>
+          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-thumb pt-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg>
+          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="10" x2="8" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="4" y="14" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="24" y1="26" x2="24" y2="56" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="20" y="38" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="40" y1="8" x2="40" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="36" y="12" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="56" y1="22" x2="56" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="52" y="32" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="72" y1="6" x2="72" y2="28" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="68" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="88" y1="18" x2="88" y2="44" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="84" y="26" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="104" y1="4" x2="104" y2="24" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="100" y="8" width="8" height="12" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><polyline points="8,22 24,46 40,20 56,40 72,16 88,32 104,12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
         </div>
         <div class="project-body">
-          <div class="project-tagrow"><span>Illustrator</span><span>UI Kit</span></div>
-          <h3>Nuur — Design System</h3>
-          <p>A reusable component and icon library adopted across three internal product teams.</p>
-          <a href="#" class="project-link">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          <div class="project-tagrow"><span>Intermediate</span><span>2 weeks</span></div>
+          <h3>Trading Psychology Workshop</h3>
+          <p>Discipline, patience, and emotional control — the mindset work that keeps a strategy working under pressure.</p>
+          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-thumb pt-6">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0zM12 7v5l3 3"/></svg>
+          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="24" x2="8" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="34" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="12" x2="24" y2="38" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="16" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="28" x2="40" y2="54" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="38" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="10" x2="56" y2="34" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="14" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="20" x2="72" y2="46" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="30" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="16" x2="104" y2="42" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="26" width="8" height="14" fill="rgba(255,255,255,0.95)"/><polyline points="8,42 24,24 40,44 56,20 72,34 88,16 104,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
         </div>
         <div class="project-body">
-          <div class="project-tagrow"><span>React Native</span><span>Firebase</span></div>
-          <h3>Waqti — Habit Tracker App</h3>
-          <p>A cross-platform mobile app helping users build routines, with streaks and gentle reminders.</p>
-          <a href="#" class="project-link">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          <div class="project-tagrow"><span>Advanced</span><span>Ongoing</span></div>
+          <h3>Live Trading Mentorship</h3>
+          <p>Small-group mentorship with live market sessions — apply everything you've learned with feedback in real time.</p>
+          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
 
@@ -645,30 +747,30 @@ footer{
   <div class="container">
     <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
       <span class="eyebrow" style="justify-content:center;">Experience</span>
-      <h2>Where I've worked</h2>
-      <p style="margin-left:auto;margin-right:auto;">A track record of building products and design systems across startups and agencies.</p>
+      <h2>My journey in the markets</h2>
+      <p style="margin-left:auto;margin-right:auto;">Six years of trading experience, built step by step into a school for the next generation of traders.</p>
     </div>
     <div class="timeline reveal">
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <span class="period">2023 — Present</span>
-        <h3>Senior Product Developer</h3>
-        <span class="org">Horizon Digital Agency</span>
-        <p>Lead developer on client web applications, owning architecture decisions and mentoring two junior developers. Partner closely with the design team to ship pixel-accurate, accessible interfaces.</p>
+        <span class="period">2024 — Present</span>
+        <h3>Founder & Lead Trainer</h3>
+        <span class="org">Naima's School</span>
+        <p>Built a trading education program for Somali girls and women from the ground up — designing the curriculum, teaching live classes, and mentoring students from their first candlestick to their first strategy.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <span class="period">2021 — 2023</span>
-        <h3>Frontend Developer & Visual Designer</h3>
-        <span class="org">Nomad Labs</span>
-        <p>Built and designed marketing sites and internal tools for early-stage startups, working end-to-end from wireframe to deployed product.</p>
+        <span class="period">2022 — 2024</span>
+        <h3>Independent Forex Trader</h3>
+        <span class="org">Self-Employed</span>
+        <p>Traded major and minor currency pairs full-time, refining a price-action based strategy and a disciplined risk management approach.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <span class="period">2019 — 2021</span>
-        <h3>Junior Graphic Designer</h3>
-        <span class="org">Studio Bright</span>
-        <p>Designed brand identities, social content, and print collateral for local businesses, developing a strong foundation in typography and visual storytelling.</p>
+        <span class="period">2019 — 2022</span>
+        <h3>Junior Trader</h3>
+        <span class="org">Self-Taught, Mentored Path</span>
+        <p>Learned the fundamentals of forex trading — chart reading, candlestick patterns, and risk control — while building the account and the discipline to trade full-time.</p>
       </div>
     </div>
   </div>
@@ -679,40 +781,40 @@ footer{
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Education</span>
-      <h2>Academic background</h2>
-      <p>The foundation behind the code and the craft.</p>
+      <h2>Learning background</h2>
+      <p>The foundation behind the strategy and the classroom.</p>
     </div>
     <div class="edu-grid reveal">
       <div class="edu-card">
         <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
         <div>
-          <span class="period">2017 — 2021</span>
-          <h3>B.Sc. Computer Science</h3>
-          <p>University of Nairobi — Focused on software engineering, algorithms, and human-computer interaction.</p>
+          <span class="period">2015 — 2019</span>
+          <h3>B.Com. Finance</h3>
+          <p>University of Nairobi — Focused on financial markets, economics, and business fundamentals.</p>
         </div>
       </div>
       <div class="edu-card">
         <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
         <div>
-          <span class="period">2022</span>
-          <h3>UX/UI Design Certification</h3>
-          <p>Design Academy Online — Intensive program covering user research, prototyping, and design systems.</p>
+          <span class="period">2020</span>
+          <h3>Technical Analysis Certification</h3>
+          <p>Online Trading Academy — In-depth study of chart patterns, indicators, and candlestick analysis.</p>
         </div>
       </div>
       <div class="edu-card">
         <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg></div>
         <div>
-          <span class="period">2023</span>
-          <h3>Full-Stack Web Development</h3>
-          <p>TechBridge Bootcamp — Advanced coursework in React, Node.js, and database design.</p>
+          <span class="period">2021</span>
+          <h3>Forex Trading Diploma</h3>
+          <p>FX Institute — Comprehensive coursework in currency markets, strategy building, and trade execution.</p>
         </div>
       </div>
       <div class="edu-card">
         <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
         <div>
-          <span class="period">2024</span>
-          <h3>Advanced Typography & Branding</h3>
-          <p>Creative Skillhouse — Specialized workshop on identity systems and editorial layout.</p>
+          <span class="period">2023</span>
+          <h3>Risk Management & Trading Psychology</h3>
+          <p>Independent study — Specialized training in position sizing, capital preservation, and trading discipline.</p>
         </div>
       </div>
     </div>
@@ -724,32 +826,32 @@ footer{
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Testimonials</span>
-      <h2>What people say</h2>
-      <p>Feedback from clients and teammates I've had the pleasure of working with.</p>
+      <h2>What my students say</h2>
+      <p>Feedback from students of Naima's School who've built real trading skills, one class at a time.</p>
     </div>
     <div class="testi-grid reveal">
       <div class="testi-card">
         <div class="testi-quote">"</div>
-        <p>Naima has a rare gift — she codes like an engineer and designs like an artist. Our product's usability improved dramatically after she joined the team.</p>
+        <p>Before Naima's School, candlestick charts looked like noise to me. Now I can read a setup with confidence. Naima explains everything so patiently.</p>
         <div class="testi-person">
           <div class="testi-avatar">AH</div>
-          <div><strong>Amina Hassan</strong><span>Product Manager, Horizon Digital</span></div>
+          <div><strong>Amina Hassan</strong><span>Student, Candlestick Patterns Masterclass</span></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-quote">"</div>
-        <p>She rebuilt our brand identity and our website in the same sprint — both were flawless. Communication was clear from kickoff to launch.</p>
+        <p>The risk management class alone changed how I trade. I finally understand position sizing and why protecting my account matters more than chasing every trade.</p>
         <div class="testi-person">
-          <div class="testi-avatar">JM</div>
-          <div><strong>James Mwangi</strong><span>Founder, Bariis Studio</span></div>
+          <div class="testi-avatar">HM</div>
+          <div><strong>Hodan Mohamed</strong><span>Student, Risk & Money Management</span></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-quote">"</div>
-        <p>Naima's attention to detail is unmatched. She caught edge cases in our design system that our whole team had missed for months.</p>
+        <p>Learning forex from a fellow Somali woman made all the difference — I felt comfortable asking questions I would never have asked elsewhere.</p>
         <div class="testi-person">
           <div class="testi-avatar">SK</div>
-          <div><strong>Sara Keinan</strong><span>Lead Engineer, Nomad Labs</span></div>
+          <div><strong>Sara Keinan</strong><span>Student, Live Trading Mentorship</span></div>
         </div>
       </div>
     </div>
@@ -761,8 +863,8 @@ footer{
   <div class="container contact-grid">
     <div class="contact-info reveal">
       <span class="eyebrow">Contact</span>
-      <h2>Let's build something together</h2>
-      <p>Have a project in mind, or just want to say hello? My inbox is always open — I try to reply within a day or two.</p>
+      <h2>Let's get you trading</h2>
+      <p>Want to join a class at Naima's School, or have a question about a course? My inbox is always open — I try to reply within a day or two.</p>
 
       <div class="contact-detail">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></div>
@@ -774,7 +876,7 @@ footer{
       </div>
       <div class="contact-detail">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><strong>Location</strong><span>Nairobi, Kenya — open to remote work</span></div>
+        <div><strong>Location</strong><span>Nairobi, Kenya — classes held online</span></div>
       </div>
 
       <div class="contact-socials">
@@ -819,17 +921,17 @@ footer{
 <footer>
   <div class="container">
     <div class="footer-top">
-      <div class="footer-logo">Naima Mahdi</div>
+      <div class="footer-logo">Naima Mahdi · Naima's School</div>
       <div class="footer-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#courses">Courses</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Naima Mahdi. All rights reserved.</span>
-      <span>Designed & built with care in Nairobi.</span>
+      <span>Naima's School — trading education in Nairobi.</span>
     </div>
   </div>
 </footer>
