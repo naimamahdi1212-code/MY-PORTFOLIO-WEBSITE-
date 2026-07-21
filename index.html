@@ -3,987 +3,1009 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naima Mahdi — Forex Trader & Founder, Naima's School</title>
+<title>Naimas Company — Built to Order</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --navy:#0a1a33;
-  --navy-deep:#061024;
-  --blue:#2563eb;
-  --blue-bright:#3b82f6;
-  --cyan:#06b6d4;
-  --white:#ffffff;
-  --off-white:#f5f8fc;
-  --ink:#0f1a2b;
-  --ink-soft:#4a5a75;
-  --line:#e2e9f5;
-  --radius:16px;
-  --shadow: 0 20px 50px -20px rgba(10,26,51,0.25);
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  font-family:'Inter',sans-serif;
-  color:var(--ink);
-  background:var(--white);
-  line-height:1.6;
-  overflow-x:hidden;
-}
-h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;}
-.mono{font-family:'JetBrains Mono',monospace;}
-img{max-width:100%;display:block;}
-a{text-decoration:none;color:inherit;}
-ul{list-style:none;}
-.container{max-width:1180px;margin:0 auto;padding:0 32px;}
-section{position:relative;}
-
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
-}
-
-/* ---------- Reveal on scroll ---------- */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;}
-.reveal.in{opacity:1;transform:translateY(0);}
-
-/* ---------- Eyebrow ---------- */
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--blue);
-  margin-bottom:16px;
-}
-.eyebrow::before{content:"";width:20px;height:2px;background:var(--blue);display:inline-block;}
-
-/* ---------- Nav ---------- */
-header{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(255,255,255,0.82);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-  transition:box-shadow .3s ease;
-}
-header.scrolled{box-shadow:0 6px 24px -12px rgba(10,26,51,0.18);}
-nav{
-  display:flex;align-items:center;justify-content:space-between;
-  max-width:1180px;margin:0 auto;padding:18px 32px;
-}
-.logo{
-  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;
-  display:flex;align-items:center;gap:10px;color:var(--navy);
-}
-.logo-mark{
-  width:34px;height:34px;border-radius:9px;
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-size:15px;font-weight:700;
-}
-.nav-links{display:flex;gap:34px;align-items:center;}
-.nav-links a{
-  font-size:14.5px;font-weight:500;color:var(--ink-soft);
-  position:relative;padding:4px 0;transition:color .25s ease;
-}
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
-  background:var(--blue);transition:width .25s ease;
-}
-.nav-links a:hover{color:var(--navy);}
-.nav-links a:hover::after{width:100%;}
-.nav-cta{
-  background:var(--navy);color:#fff !important;padding:10px 20px;border-radius:999px;
-  font-size:13.5px;font-weight:600;
-  transition:transform .25s ease, background .25s ease;
-}
-.nav-cta:hover{background:var(--blue);transform:translateY(-2px);}
-.nav-cta::after{display:none;}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
-.burger span{width:24px;height:2px;background:var(--navy);border-radius:2px;}
-
-/* ---------- Hero ---------- */
-.hero{
-  padding:170px 0 110px;
-  background:
-    radial-gradient(circle at 85% 15%, rgba(37,99,235,0.10), transparent 45%),
-    radial-gradient(circle at 10% 90%, rgba(6,182,212,0.10), transparent 40%),
-    var(--off-white);
-  position:relative;overflow:hidden;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
-  background-size:44px 44px;
-  mask-image:linear-gradient(to bottom, black, transparent 75%);
-  pointer-events:none;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1.05fr 0.85fr;gap:60px;align-items:center;
-  position:relative;z-index:1;
-}
-.hero-text .eyebrow{margin-bottom:22px;}
-.hero-text h1{
-  font-size:clamp(38px,5vw,58px);font-weight:700;color:var(--navy);
-  line-height:1.06;margin-bottom:22px;
-}
-.hero-text h1 .accent{
-  background:linear-gradient(120deg,var(--blue),var(--cyan));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.hero-text p{
-  font-size:17.5px;color:var(--ink-soft);max-width:480px;margin-bottom:34px;
-}
-.hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:44px;}
-.btn{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;
-  transition:transform .28s ease, box-shadow .28s ease, background .28s ease, color .28s ease;
-  border:none;cursor:pointer;
-}
-.btn-primary{
-  background:var(--navy);color:#fff;
-  box-shadow:0 14px 28px -12px rgba(10,26,51,0.45);
-}
-.btn-primary:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 18px 34px -12px rgba(37,99,235,0.5);}
-.btn-outline{
-  background:transparent;color:var(--navy);border:1.5px solid var(--line);
-}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-3px);background:#fff;}
-.hero-socials{display:flex;gap:14px;}
-.social-icon{
-  width:42px;height:42px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:#fff;border:1px solid var(--line);color:var(--navy);
-  transition:all .25s ease;
-}
-.social-icon:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-4px);}
-.social-icon svg{width:18px;height:18px;}
-
-/* Hero portrait */
-.hero-visual{position:relative;display:flex;justify-content:center;}
-.portrait-ring{
-  position:relative;width:340px;height:340px;
-  animation:float 6s ease-in-out infinite;
-}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
-.portrait-ring::before{
-  content:"";position:absolute;inset:-18px;border-radius:50%;
-  background:conic-gradient(from 180deg, var(--blue), var(--cyan), var(--blue));
-  animation:spin 12s linear infinite;
-  opacity:0.55;
-}
-@keyframes spin{to{transform:rotate(360deg);}}
-.portrait-frame{
-  position:absolute;inset:0;border-radius:50%;overflow:hidden;
-  background:linear-gradient(160deg,#dce8fb,#eef4fd);
-  border:6px solid #fff;box-shadow:var(--shadow);
-  display:flex;align-items:center;justify-content:center;
-}
-.portrait-frame img, .portrait-frame svg{width:100%;height:100%;object-fit:cover;}
-.badge-float{
-  position:absolute;background:#fff;border-radius:14px;padding:12px 16px;
-  box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;
-  font-size:13px;font-weight:600;color:var(--navy);
-}
-.badge-1{top:6%;left:-8%;animation:float 5s ease-in-out infinite;animation-delay:.3s;}
-.badge-2{bottom:8%;right:-10%;animation:float 5.5s ease-in-out infinite;animation-delay:.6s;}
-.badge-dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(6,182,212,0.18);}
-
-/* ---------- Section heading ---------- */
-.section-head{max-width:600px;margin-bottom:56px;}
-.section-head h2{font-size:clamp(28px,3.5vw,40px);color:var(--navy);font-weight:700;}
-.section-head p{color:var(--ink-soft);font-size:16px;margin-top:14px;}
-.section-pad{padding:110px 0;}
-.bg-off{background:var(--off-white);}
-
-/* ---------- About ---------- */
-.about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
-.about-visual{
-  border-radius:24px;background:linear-gradient(155deg,var(--navy),#122a52);
-  padding:40px;color:#fff;position:relative;overflow:hidden;min-height:380px;
-  display:flex;flex-direction:column;justify-content:center;gap:22px;
-}
-.about-visual::after{
-  content:"";position:absolute;width:260px;height:260px;border-radius:50%;
-  background:radial-gradient(circle,rgba(6,182,212,0.35),transparent 70%);
-  top:-80px;right:-80px;
-}
-.about-stat{position:relative;z-index:1;}
-.about-stat strong{font-family:'Space Grotesk',sans-serif;font-size:36px;display:block;}
-.about-stat span{font-size:13.5px;color:#b9c8e6;font-family:'JetBrains Mono',monospace;}
-.about-body p{color:var(--ink-soft);font-size:16px;margin-bottom:18px;}
-.about-body p strong{color:var(--navy);}
-.about-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
-.tag{
-  padding:8px 15px;border-radius:999px;background:var(--off-white);
-  border:1px solid var(--line);font-size:13px;font-weight:500;color:var(--navy);
-  font-family:'JetBrains Mono',monospace;
-}
-
-/* ---------- Classroom banner ---------- */
-.classroom-banner{padding:70px 0;}
-.classroom-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:50px;align-items:center;}
-.classroom-visual{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);}
-.classroom-visual svg{width:100%;height:auto;display:block;}
-
-/* ---------- Skills ---------- */
-.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
-.skill-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:34px;transition:transform .3s ease, box-shadow .3s ease;
-}
-.skill-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
-.skill-card h3{font-size:20px;color:var(--navy);margin-bottom:22px;display:flex;align-items:center;gap:10px;}
-.skill-card h3 .dot{width:10px;height:10px;border-radius:3px;background:var(--blue);}
-.skill-row{margin-bottom:18px;}
-.skill-row:last-child{margin-bottom:0;}
-.skill-label{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:8px;color:var(--ink-soft);font-weight:500;}
-.skill-bar{height:7px;background:var(--off-white);border-radius:99px;overflow:hidden;}
-.skill-fill{
-  height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));
-  width:0%;transition:width 1.2s cubic-bezier(.22,.9,.32,1);
-}
-
-/* ---------- Projects ---------- */
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.project-card{
-  border-radius:var(--radius);overflow:hidden;background:#fff;
-  border:1px solid var(--line);transition:transform .35s ease, box-shadow .35s ease;
-  display:flex;flex-direction:column;
-}
-.project-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);}
-.project-thumb{
-  height:190px;position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.project-thumb::after{content:"";position:absolute;inset:0;background:rgba(10,26,51,0.0);transition:background .3s ease;}
-.project-card:hover .project-thumb::after{background:rgba(10,26,51,0.12);}
-.project-thumb svg{width:104px;height:60px;opacity:0.9;transition:transform .4s ease;}
-.project-card:hover .project-thumb svg{transform:scale(1.12) rotate(-4deg);}
-.pt-1{background:linear-gradient(135deg,#2563eb,#0a1a33);}
-.pt-2{background:linear-gradient(135deg,#06b6d4,#2563eb);}
-.pt-3{background:linear-gradient(135deg,#0a1a33,#06b6d4);}
-.pt-4{background:linear-gradient(135deg,#3b82f6,#0a1a33);}
-.pt-5{background:linear-gradient(135deg,#06b6d4,#0a1a33);}
-.pt-6{background:linear-gradient(135deg,#2563eb,#06b6d4);}
-.project-body{padding:24px;flex:1;display:flex;flex-direction:column;}
-.project-tagrow{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
-.project-tagrow span{
-  font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--blue);
-  background:rgba(37,99,235,0.08);padding:4px 9px;border-radius:6px;
-}
-.project-body h3{font-size:18px;color:var(--navy);margin-bottom:8px;}
-.project-body p{font-size:14px;color:var(--ink-soft);flex:1;margin-bottom:16px;}
-.project-link{font-size:13.5px;font-weight:600;color:var(--navy);display:inline-flex;align-items:center;gap:6px;}
-.project-link svg{width:14px;height:14px;transition:transform .25s ease;}
-.project-link:hover svg{transform:translate(3px,-3px);}
-.project-link:hover{color:var(--blue);}
-
-/* ---------- Experience Timeline ---------- */
-.timeline{position:relative;max-width:820px;margin:0 auto;}
-.timeline::before{
-  content:"";position:absolute;left:20px;top:6px;bottom:6px;width:2px;
-  background:linear-gradient(var(--line),var(--line));
-}
-.timeline-item{position:relative;padding-left:64px;margin-bottom:44px;}
-.timeline-item:last-child{margin-bottom:0;}
-.timeline-dot{
-  position:absolute;left:11px;top:4px;width:20px;height:20px;border-radius:50%;
-  background:#fff;border:3px solid var(--blue);
-}
-.timeline-item .period{
-  font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--blue);
-  margin-bottom:6px;display:block;
-}
-.timeline-item h3{font-size:19px;color:var(--navy);margin-bottom:4px;}
-.timeline-item .org{font-size:14px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;display:block;}
-.timeline-item p{font-size:14.5px;color:var(--ink-soft);}
-
-/* ---------- Education ---------- */
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
-.edu-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:30px;display:flex;gap:20px;transition:transform .3s ease, box-shadow .3s ease;
-}
-.edu-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
-.edu-icon{
-  width:52px;height:52px;flex-shrink:0;border-radius:12px;
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-  display:flex;align-items:center;justify-content:center;color:#fff;
-}
-.edu-icon svg{width:24px;height:24px;}
-.edu-card h3{font-size:17px;color:var(--navy);margin-bottom:4px;}
-.edu-card .period{font-size:12.5px;font-family:'JetBrains Mono',monospace;color:var(--blue);margin-bottom:8px;display:block;}
-.edu-card p{font-size:14px;color:var(--ink-soft);}
-
-/* ---------- Testimonials ---------- */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.testi-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:30px;transition:transform .3s ease, box-shadow .3s ease;position:relative;
-}
-.testi-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
-.testi-quote{font-size:32px;color:var(--blue);font-family:'Space Grotesk',sans-serif;line-height:1;margin-bottom:14px;}
-.testi-card p{font-size:14.5px;color:var(--ink-soft);margin-bottom:22px;}
-.testi-person{display:flex;align-items:center;gap:12px;}
-.testi-avatar{
-  width:44px;height:44px;border-radius:50%;
-  background:linear-gradient(135deg,var(--navy),var(--blue));
-  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px;
-  font-family:'Space Grotesk',sans-serif;
-}
-.testi-person strong{display:block;font-size:14px;color:var(--navy);}
-.testi-person span{font-size:12.5px;color:var(--ink-soft);}
-
-/* ---------- Contact ---------- */
-.contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;}
-.contact-info h2{font-size:clamp(28px,3.5vw,38px);color:var(--navy);margin-bottom:16px;}
-.contact-info p{color:var(--ink-soft);margin-bottom:32px;font-size:16px;}
-.contact-detail{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
-.contact-detail .ic{
-  width:42px;height:42px;border-radius:12px;background:var(--off-white);
-  display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0;
-}
-.contact-detail .ic svg{width:18px;height:18px;}
-.contact-detail strong{display:block;font-size:14px;color:var(--navy);}
-.contact-detail span{font-size:13.5px;color:var(--ink-soft);}
-.contact-socials{display:flex;gap:12px;margin-top:32px;}
-
-.contact-form{
-  background:var(--off-white);border-radius:20px;padding:40px;border:1px solid var(--line);
-}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
-.field{display:flex;flex-direction:column;gap:8px;}
-.field.full{grid-column:1/-1;}
-.field label{font-size:13px;font-weight:600;color:var(--navy);}
-.field input, .field textarea{
-  padding:13px 16px;border-radius:10px;border:1.5px solid var(--line);
-  font-family:'Inter',sans-serif;font-size:14.5px;background:#fff;
-  transition:border-color .25s ease, box-shadow .25s ease;
-}
-.field input:focus, .field textarea:focus{
-  outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(37,99,235,0.12);
-}
-.field textarea{resize:vertical;min-height:120px;}
-.submit-btn{width:100%;justify-content:center;margin-top:6px;}
-.form-note{font-size:12.5px;color:var(--ink-soft);margin-top:14px;text-align:center;}
-
-/* ---------- Footer ---------- */
-footer{
-  background:var(--navy);color:#cfdcf3;padding:56px 0 28px;
-}
-.footer-top{
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;
-  padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:24px;
-}
-.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:#fff;}
-.footer-links{display:flex;gap:26px;flex-wrap:wrap;}
-.footer-links a{font-size:14px;color:#b9c8e6;transition:color .25s ease;}
-.footer-links a:hover{color:#fff;}
-.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:#8ea1c4;}
-
-/* ---------- Responsive ---------- */
-@media (max-width:980px){
-  .hero-grid, .about-grid, .contact-grid, .classroom-grid{grid-template-columns:1fr;}
-  .hero-visual{order:-1;margin-bottom:20px;}
-  .project-grid, .skills-grid, .edu-grid, .testi-grid{grid-template-columns:1fr 1fr;}
-}
-@media (max-width:760px){
-  .nav-links{
-    position:fixed;top:70px;left:0;right:0;background:#fff;flex-direction:column;
-    padding:24px 32px;gap:20px;border-bottom:1px solid var(--line);
-    transform:translateY(-140%);opacity:0;transition:all .35s ease;
+  :root{
+    --cream:#F4E9D8;
+    --cream-2:#ECDDC4;
+    --paper:#FBF5EA;
+    --brown-deep:#241509;
+    --brown:#3B2416;
+    --brown-mid:#6E4A31;
+    --brown-line:rgba(36,21,9,0.15);
+    --pink:#C24463;
+    --pink-deep:#9E2F4C;
+    --pink-soft:#EFC2CC;
+    --copper:#B9793F;
+    --copper-light:#DDA765;
+    --cream-rgb:244,233,216;
+    --shadow: 0 20px 45px -20px rgba(36,21,9,0.45);
+    --ease: cubic-bezier(.22,.9,.32,1);
   }
-  .nav-links.open{transform:translateY(0);opacity:1;}
-  .burger{display:flex;}
-  .project-grid, .skills-grid, .edu-grid, .testi-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .hero{padding:150px 0 80px;}
-  .section-pad{padding:80px 0;}
-  .portrait-ring{width:260px;height:260px;}
-  .badge-1, .badge-2{display:none;}
-}
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--brown-deep);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--pink);color:var(--paper);}
+
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;color:var(--brown-deep);}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--pink-deep);
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--pink-deep);display:inline-block;}
+  .container{max-width:1240px;margin:0 auto;padding:0 6vw;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease), transform 0.9s var(--ease);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .reveal-scale{opacity:0;transform:scale(0.94);transition:opacity 0.9s var(--ease), transform 0.9s var(--ease);}
+  .reveal-scale.in{opacity:1;transform:scale(1);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal,.reveal-scale{transition:none;opacity:1;transform:none;}
+    *{animation:none !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    padding:1.1rem 6vw;
+    display:flex;align-items:center;justify-content:space-between;
+    background:rgba(244,233,216,0.72);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;
+    transition:border-color 0.4s ease, background 0.4s ease;
+  }
+  header.scrolled{border-bottom-color:var(--brown-line);background:rgba(244,233,216,0.92);}
+  .logo{display:flex;align-items:center;gap:0.7rem;}
+  .logo-badge{
+    width:38px;height:38px;border-radius:50%;
+    background:conic-gradient(from 220deg,var(--copper-light),var(--pink),var(--copper),var(--copper-light));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow: inset 0 0 0 3px var(--paper), 0 4px 10px rgba(36,21,9,0.35);
+  }
+  .logo-badge span{font-family:'Fraunces',serif;font-weight:700;font-size:0.95rem;color:var(--brown-deep);}
+  .logo-text{font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;letter-spacing:-0.01em;}
+  .logo-text small{display:block;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:0.6rem;letter-spacing:0.24em;color:var(--brown-mid);text-transform:uppercase;}
+
+  nav ul{list-style:none;display:flex;gap:2.1rem;}
+  nav a{
+    font-size:0.88rem;font-weight:500;color:var(--brown);position:relative;padding:0.2rem 0;
+  }
+  nav a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--pink);transition:width 0.35s var(--ease);
+  }
+  nav a:hover::after{width:100%;}
+  .nav-links{display:flex;}
+  .nav-cta{
+    padding:0.6rem 1.3rem;border-radius:100px;
+    background:var(--brown-deep);color:var(--cream) !important;
+    font-size:0.82rem;font-weight:600;
+    transition:transform 0.3s var(--ease), background 0.3s ease;
+  }
+  .nav-cta:hover{transform:translateY(-2px);background:var(--pink-deep);}
+  .menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-toggle span{width:24px;height:2px;background:var(--brown-deep);border-radius:2px;}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:0.6rem;
+    padding:0.95rem 1.9rem;border-radius:100px;
+    font-weight:600;font-size:0.92rem;
+    border:1px solid transparent;cursor:pointer;
+    transition:transform 0.3s var(--ease), box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+  }
+  .btn-primary{background:var(--pink);color:var(--paper);box-shadow:0 14px 30px -12px rgba(194,68,99,0.65);}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 36px -12px rgba(194,68,99,0.75);background:var(--pink-deep);}
+  .btn-outline{background:transparent;border-color:var(--brown-deep);color:var(--brown-deep);}
+  .btn-outline:hover{background:var(--brown-deep);color:var(--cream);transform:translateY(-3px);}
+  .btn-ghost-dark{background:rgba(251,245,234,0.1);border-color:rgba(251,245,234,0.4);color:var(--paper);}
+  .btn-ghost-dark:hover{background:var(--paper);color:var(--brown-deep);transform:translateY(-3px);}
+  .btn svg{width:16px;height:16px;transition:transform 0.3s var(--ease);}
+  .btn:hover svg{transform:translateX(3px);}
+
+  section{position:relative;}
+  .section-pad{padding:7.5rem 0;}
+  .section-head{max-width:640px;margin-bottom:3.4rem;}
+  .section-head h2{font-size:clamp(2rem,4vw,2.9rem);margin-top:0.9rem;line-height:1.08;}
+  .section-head p{margin-top:1.1rem;font-size:1.05rem;color:var(--brown-mid);line-height:1.6;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;
+    padding-top:6rem;
+    background:
+      radial-gradient(circle at 85% 12%, rgba(194,68,99,0.16), transparent 45%),
+      radial-gradient(circle at 8% 90%, rgba(185,121,63,0.22), transparent 40%),
+      var(--cream);
+    position:relative;overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 0.95fr;gap:3rem;align-items:center;
+    width:100%;
+  }
+  .hero-copy .eyebrow{margin-bottom:1.4rem;}
+  .hero h1{
+    font-size:clamp(2.6rem,6vw,4.4rem);
+    line-height:0.98;
+    font-weight:600;
+  }
+  .hero h1 em{
+    font-style:italic;font-weight:300;color:var(--pink-deep);
+    position:relative;
+  }
+  .hero-copy p.lede{
+    margin-top:1.6rem;font-size:1.15rem;color:var(--brown-mid);max-width:480px;line-height:1.65;
+  }
+  .hero-actions{display:flex;gap:1rem;margin-top:2.6rem;flex-wrap:wrap;}
+  .hero-stats{
+    display:flex;gap:2.4rem;margin-top:3.4rem;padding-top:2rem;border-top:1px solid var(--brown-line);
+  }
+  .hero-stats div strong{font-family:'Fraunces',serif;font-size:1.9rem;display:block;color:var(--brown-deep);}
+  .hero-stats div span{font-size:0.78rem;color:var(--brown-mid);font-family:'JetBrains Mono',monospace;letter-spacing:0.03em;}
+
+  .hero-visual{position:relative;height:560px;}
+  .ticket-frame{
+    position:absolute;border-radius:22px;overflow:hidden;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,0.25);
+  }
+  .ticket-frame img{width:100%;height:100%;object-fit:cover;}
+  .frame-main{width:78%;height:70%;top:0;right:0;z-index:3;animation:float1 7s ease-in-out infinite;}
+  .frame-second{width:56%;height:46%;bottom:0;left:0;z-index:2;animation:float2 8s ease-in-out infinite;}
+  .badge-float{
+    position:absolute;bottom:8%;right:6%;z-index:4;
+    background:var(--paper);border-radius:16px;padding:0.9rem 1.2rem;
+    box-shadow:var(--shadow);display:flex;align-items:center;gap:0.7rem;
+    animation:float3 6s ease-in-out infinite;
+  }
+  .badge-float .dot{width:9px;height:9px;border-radius:50%;background:#4caf6b;box-shadow:0 0 0 4px rgba(76,175,107,0.2);}
+  .badge-float span{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--brown);}
+  @keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
+  @keyframes float3{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-1deg)}}
+
+  .marquee-wrap{
+    border-top:1px solid var(--brown-line);border-bottom:1px solid var(--brown-line);
+    background:var(--cream-2);padding:1.1rem 0;overflow:hidden;
+  }
+  .marquee{display:flex;gap:3.5rem;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite;}
+  .marquee span{font-family:'JetBrains Mono',monospace;font-size:0.82rem;letter-spacing:0.14em;color:var(--brown-mid);text-transform:uppercase;}
+  .marquee span em{color:var(--pink-deep);font-style:normal;}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:4rem;align-items:center;}
+  .about-gallery{position:relative;height:420px;}
+  .about-gallery img{
+    position:absolute;border-radius:18px;object-fit:cover;box-shadow:var(--shadow);border:6px solid var(--paper);
+  }
+  .ag-1{width:62%;height:78%;top:0;left:0;z-index:2;}
+  .ag-2{width:52%;height:52%;bottom:0;right:0;z-index:3;}
+  .about-copy .stamp{
+    display:inline-block;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;
+    color:var(--copper);border:1px solid var(--copper);padding:0.3rem 0.7rem;border-radius:100px;text-transform:uppercase;
+  }
+  .about-copy h2{margin-top:1rem;font-size:clamp(2rem,3.6vw,2.7rem);line-height:1.1;}
+  .about-copy p{margin-top:1.2rem;color:var(--brown-mid);line-height:1.7;font-size:1.02rem;}
+  .about-list{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;}
+  .about-list li{list-style:none;display:flex;gap:0.7rem;align-items:flex-start;font-size:0.92rem;color:var(--brown);}
+  .about-list li::before{content:"✓";color:var(--pink);font-weight:700;margin-top:0.1rem;}
+
+  /* ---------- TICKET CARD (signature element) ---------- */
+  .ticket{
+    background:var(--paper);
+    border-radius:20px;
+    position:relative;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+  }
+  .ticket:hover{transform:translateY(-10px);box-shadow:0 30px 55px -18px rgba(36,21,9,0.5);}
+  .ticket-photo{height:220px;position:relative;overflow:hidden;}
+  .ticket-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s var(--ease);}
+  .ticket:hover .ticket-photo img{transform:scale(1.08);}
+  .ticket-tag{
+    position:absolute;top:14px;left:14px;background:var(--brown-deep);color:var(--cream);
+    font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;
+    padding:0.35rem 0.7rem;border-radius:100px;
+  }
+  .ticket-body{padding:1.5rem 1.6rem 1.7rem;position:relative;}
+  .ticket-body::before{
+    content:"";position:absolute;top:-1px;left:0;right:0;height:1px;
+    background-image:repeating-linear-gradient(to right, var(--brown-line) 0 8px, transparent 8px 16px);
+  }
+  .ticket-perf{
+    position:absolute;top:-10px;left:0;right:0;height:20px;
+    background-image:radial-gradient(circle 6px, var(--cream) 6px, transparent 7px);
+    background-size:26px 20px;background-repeat:repeat-x;background-position:10px center;
+  }
+  .ticket-row{display:flex;justify-content:space-between;align-items:flex-start;gap:0.6rem;}
+  .ticket-row h3{font-size:1.2rem;}
+  .ticket-price{font-family:'JetBrains Mono',monospace;color:var(--pink-deep);font-weight:700;white-space:nowrap;font-size:0.95rem;}
+  .ticket-body p{margin-top:0.6rem;font-size:0.9rem;color:var(--brown-mid);line-height:1.55;}
+  .ticket-specs{display:flex;gap:1rem;margin-top:1.1rem;flex-wrap:wrap;}
+  .ticket-specs span{
+    font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--brown);background:var(--cream-2);
+    padding:0.3rem 0.6rem;border-radius:6px;
+  }
+  .ticket-cta{
+    margin-top:1.3rem;display:flex;align-items:center;gap:0.4rem;
+    font-size:0.85rem;font-weight:600;color:var(--pink-deep);
+  }
+  .ticket-cta svg{width:14px;height:14px;transition:transform 0.3s var(--ease);}
+  .ticket:hover .ticket-cta svg{transform:translateX(4px);}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+
+  /* ---------- FEATURED (dark band) ---------- */
+  .featured{
+    background:var(--brown-deep);color:var(--cream);
+  }
+  .featured .eyebrow{color:var(--copper-light);}
+  .featured .eyebrow::before{background:var(--copper-light);}
+  .featured .section-head h2{color:var(--cream);}
+  .featured .section-head p{color:rgba(244,233,216,0.68);}
+  .featured .ticket{background:#2E1B0F;}
+  .featured .ticket-body::before{background-image:repeating-linear-gradient(to right, rgba(244,233,216,0.15) 0 8px, transparent 8px 16px);}
+  .featured .ticket-perf{background-image:radial-gradient(circle 6px, var(--brown-deep) 6px, transparent 7px);}
+  .featured .ticket-row h3{color:var(--cream);}
+  .featured .ticket-body p{color:rgba(244,233,216,0.62);}
+  .featured .ticket-specs span{background:rgba(244,233,216,0.08);color:rgba(244,233,216,0.85);}
+
+  /* ---------- SUBLINE BLOCKS: BMW / Mercedes / Moto ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;align-items:center;}
+  .split.reverse .split-media{order:2;}
+  .split-media{position:relative;height:520px;overflow:hidden;}
+  .split-media img{width:100%;height:100%;object-fit:cover;}
+  .split-media::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(36,21,9,0) 55%, rgba(36,21,9,0.55));
+  }
+  .split-caption{
+    position:absolute;left:2rem;bottom:2rem;color:var(--paper);z-index:2;
+  }
+  .split-caption .eyebrow{color:var(--copper-light);}
+  .split-caption .eyebrow::before{background:var(--copper-light);}
+  .split-copy{padding:5rem 6vw;}
+  .split-copy h2{font-size:clamp(2rem,3.6vw,2.6rem);margin-top:0.9rem;line-height:1.1;}
+  .split-copy p{margin-top:1.1rem;color:var(--brown-mid);line-height:1.7;font-size:1.02rem;max-width:480px;}
+  .spec-strip{display:flex;gap:0;margin-top:2rem;border:1px solid var(--brown-line);border-radius:14px;overflow:hidden;}
+  .spec-strip div{flex:1;padding:1rem 1.1rem;border-right:1px solid var(--brown-line);}
+  .spec-strip div:last-child{border-right:none;}
+  .spec-strip strong{display:block;font-family:'JetBrains Mono',monospace;font-size:1.05rem;color:var(--pink-deep);}
+  .spec-strip span{font-size:0.72rem;color:var(--brown-mid);text-transform:uppercase;letter-spacing:0.06em;}
+  .split-copy .btn{margin-top:2.2rem;}
+
+  .bmw-band{background:var(--cream-2);}
+  .merc-band{background:var(--cream);}
+  .moto-band{background:var(--cream-2);}
+
+  /* moto strip gallery */
+  .moto-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1rem;}
+  .moto-gallery figure{border-radius:16px;overflow:hidden;position:relative;height:240px;box-shadow:var(--shadow);}
+  .moto-gallery img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s var(--ease);}
+  .moto-gallery figure:hover img{transform:scale(1.1) rotate(0.5deg);}
+  .moto-gallery figcaption{
+    position:absolute;left:0.9rem;bottom:0.8rem;color:var(--paper);font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;letter-spacing:0.06em;background:rgba(36,21,9,0.55);padding:0.3rem 0.6rem;border-radius:100px;
+  }
+
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--brown-deep);color:var(--cream);}
+  .pricing .eyebrow{color:var(--copper-light);}
+  .pricing .eyebrow::before{background:var(--copper-light);}
+  .pricing .section-head h2{color:var(--cream);}
+  .pricing .section-head p{color:rgba(244,233,216,0.68);}
+  .price-card{
+    background:#2E1B0F;border-radius:20px;padding:2.4rem 2rem;position:relative;
+    border:1px solid rgba(244,233,216,0.1);
+    transition:transform 0.4s var(--ease), border-color 0.4s ease;
+  }
+  .price-card:hover{transform:translateY(-8px);border-color:var(--pink);}
+  .price-card.featured{background:linear-gradient(160deg,#4a2136,#2E1B0F 60%);border-color:var(--pink);}
+  .price-card .ribbon{
+    position:absolute;top:-1px;right:1.6rem;background:var(--pink);color:var(--paper);
+    font-family:'JetBrains Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;
+    padding:0.4rem 0.8rem;border-radius:0 0 8px 8px;
+  }
+  .price-card .plan-name{font-family:'JetBrains Mono',monospace;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--copper-light);}
+  .price-card h3{color:var(--cream);font-size:1.5rem;margin-top:0.6rem;}
+  .price-card .amount{display:flex;align-items:baseline;gap:0.4rem;margin-top:1.1rem;}
+  .price-card .amount b{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:600;}
+  .price-card .amount span{color:rgba(244,233,216,0.55);font-size:0.85rem;}
+  .price-card ul{list-style:none;margin-top:1.6rem;display:flex;flex-direction:column;gap:0.75rem;}
+  .price-card ul li{font-size:0.9rem;color:rgba(244,233,216,0.78);display:flex;gap:0.6rem;}
+  .price-card ul li::before{content:"—";color:var(--pink);}
+  .price-card .btn{width:100%;justify-content:center;margin-top:2rem;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials{background:var(--cream);}
+  .test-track{
+    display:flex;gap:1.6rem;overflow-x:auto;padding-bottom:1rem;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .test-track::-webkit-scrollbar{height:6px;}
+  .test-track::-webkit-scrollbar-thumb{background:var(--brown-line);border-radius:4px;}
+  .test-card{
+    scroll-snap-align:start;min-width:340px;max-width:340px;background:var(--paper);border-radius:20px;
+    padding:2.1rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:1.2rem;
+  }
+  .stars{display:flex;gap:0.2rem;color:var(--copper);}
+  .stars svg{width:16px;height:16px;fill:var(--copper);}
+  .test-card p{color:var(--brown);line-height:1.65;font-size:0.97rem;}
+  .test-person{display:flex;align-items:center;gap:0.8rem;margin-top:auto;}
+  .test-avatar{
+    width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--copper));
+    display:flex;align-items:center;justify-content:center;color:var(--paper);font-family:'Fraunces',serif;font-weight:700;
+  }
+  .test-person strong{display:block;font-size:0.92rem;}
+  .test-person span{font-size:0.78rem;color:var(--brown-mid);}
+
+  /* ---------- ORDERS ---------- */
+  .orders{
+    background:linear-gradient(135deg, var(--pink-deep), var(--brown-deep) 70%);
+    color:var(--paper);position:relative;overflow:hidden;
+  }
+  .orders::before{
+    content:"";position:absolute;width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+    top:-200px;right:-150px;
+  }
+  .orders-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;position:relative;z-index:2;}
+  .orders .eyebrow{color:var(--copper-light);}
+  .orders .eyebrow::before{background:var(--copper-light);}
+  .orders h2{color:var(--paper);font-size:clamp(2rem,3.8vw,2.8rem);margin-top:0.9rem;line-height:1.1;}
+  .orders p.lede{margin-top:1.1rem;color:rgba(251,245,234,0.75);font-size:1.05rem;line-height:1.65;max-width:460px;}
+  .order-steps{margin-top:2rem;display:flex;flex-direction:column;gap:1rem;}
+  .order-steps div{display:flex;gap:1rem;align-items:flex-start;}
+  .order-steps .num{
+    font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--brown-deep);background:var(--copper-light);
+    width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;
+  }
+  .order-steps strong{display:block;font-size:0.95rem;}
+  .order-steps span{font-size:0.85rem;color:rgba(251,245,234,0.65);}
+
+  .order-form{
+    background:var(--paper);border-radius:22px;padding:2.4rem;box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);color:var(--brown-deep);
+  }
+  .order-form h3{font-size:1.3rem;}
+  .order-form p.sub{color:var(--brown-mid);font-size:0.88rem;margin-top:0.4rem;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-top:1.4rem;}
+  .form-field{display:flex;flex-direction:column;gap:0.4rem;grid-column:span 1;}
+  .form-field.full{grid-column:span 2;}
+  .form-field label{font-size:0.76rem;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;color:var(--brown-mid);text-transform:uppercase;}
+  .form-field input,.form-field select,.form-field textarea{
+    padding:0.8rem 0.9rem;border-radius:10px;border:1px solid var(--brown-line);background:var(--cream);
+    font-family:'Inter',sans-serif;font-size:0.92rem;color:var(--brown-deep);outline:none;
+    transition:border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+    border-color:var(--pink);box-shadow:0 0 0 3px rgba(194,68,99,0.15);
+  }
+  .order-form .btn{width:100%;justify-content:center;margin-top:1.6rem;}
+  .form-note{margin-top:0.9rem;font-size:0.76rem;color:var(--brown-mid);text-align:center;}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--cream);}
+  .faq-wrap{max-width:820px;}
+  .faq-item{
+    border-bottom:1px solid var(--brown-line);
+  }
+  .faq-q{
+    width:100%;background:none;border:none;text-align:left;padding:1.5rem 0;
+    display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1rem;
+  }
+  .faq-q h4{font-size:1.05rem;font-weight:600;}
+  .faq-icon{
+    width:30px;height:30px;border-radius:50%;border:1px solid var(--brown-line);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;position:relative;transition:transform 0.4s var(--ease), background 0.3s ease;
+  }
+  .faq-icon::before,.faq-icon::after{content:"";position:absolute;background:var(--brown-deep);transition:transform 0.3s ease, opacity 0.3s ease;}
+  .faq-icon::before{width:11px;height:1.4px;}
+  .faq-icon::after{width:1.4px;height:11px;}
+  .faq-item.open .faq-icon{background:var(--pink);border-color:var(--pink);}
+  .faq-item.open .faq-icon::before,.faq-item.open .faq-icon::after{background:var(--paper);}
+  .faq-item.open .faq-icon::after{opacity:0;}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height 0.45s var(--ease);}
+  .faq-a p{padding-bottom:1.5rem;color:var(--brown-mid);line-height:1.65;max-width:640px;font-size:0.95rem;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--brown-deep);color:var(--cream);}
+  .contact .eyebrow{color:var(--copper-light);}
+  .contact .eyebrow::before{background:var(--copper-light);}
+  .contact .section-head h2{color:var(--cream);}
+  .contact .section-head p{color:rgba(244,233,216,0.68);}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:3rem;}
+  .contact-card{
+    background:rgba(244,233,216,0.05);border:1px solid rgba(244,233,216,0.12);border-radius:18px;padding:2rem;
+    transition:transform 0.35s var(--ease), background 0.35s ease;
+  }
+  .contact-card:hover{transform:translateY(-6px);background:rgba(244,233,216,0.09);}
+  .contact-card .ic{
+    width:44px;height:44px;border-radius:12px;background:var(--pink);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;
+  }
+  .contact-card .ic svg{width:20px;height:20px;stroke:var(--paper);}
+  .contact-card h4{color:var(--cream);font-size:1.05rem;}
+  .contact-card p{margin-top:0.5rem;color:rgba(244,233,216,0.65);font-size:0.9rem;line-height:1.6;}
+  .contact-map{
+    border-radius:20px;height:320px;overflow:hidden;position:relative;
+    background:linear-gradient(135deg,#2E1B0F,#3B2416);border:1px solid rgba(244,233,216,0.12);
+  }
+  .contact-map img{width:100%;height:100%;object-fit:cover;opacity:0.55;}
+  .contact-map .pin{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  }
+  .pin-dot{width:18px;height:18px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 8px rgba(194,68,99,0.25);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 8px rgba(194,68,99,0.25)}50%{box-shadow:0 0 0 14px rgba(194,68,99,0.08)}}
+  .pin span{font-family:'JetBrains Mono',monospace;font-size:0.78rem;background:var(--paper);color:var(--brown-deep);padding:0.4rem 0.8rem;border-radius:100px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#1B0F07;color:rgba(244,233,216,0.65);padding:3.5rem 0 2rem;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(244,233,216,0.1);}
+  .footer-brand .logo-text{color:var(--cream);}
+  .footer-brand p{margin-top:0.9rem;max-width:280px;font-size:0.88rem;line-height:1.6;}
+  .footer-cols{display:flex;gap:4rem;flex-wrap:wrap;}
+  .footer-col h5{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--copper-light);margin-bottom:1rem;}
+  .footer-col a{display:block;font-size:0.88rem;margin-bottom:0.7rem;color:rgba(244,233,216,0.65);transition:color 0.3s ease;}
+  .footer-col a:hover{color:var(--pink);}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:1.6rem;font-size:0.78rem;flex-wrap:wrap;gap:0.8rem;}
+  .social-row{display:flex;gap:0.8rem;}
+  .social-row a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(244,233,216,0.2);display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;}
+  .social-row a:hover{background:var(--pink);border-color:var(--pink);}
+  .social-row svg{width:15px;height:15px;stroke:var(--cream);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{height:400px;order:-1;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-gallery{height:340px;}
+    .grid-3{grid-template-columns:1fr 1fr;}
+    .grid-4{grid-template-columns:1fr 1fr;}
+    .split{grid-template-columns:1fr;}
+    .split.reverse .split-media{order:0;}
+    .split-media{height:380px;}
+    .split-copy{padding:3.5rem 6vw;}
+    .moto-gallery{grid-template-columns:1fr 1fr;}
+    .orders-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links{position:fixed;top:74px;left:0;right:0;background:var(--paper);flex-direction:column;padding:1.5rem 6vw;gap:1.2rem;
+      box-shadow:var(--shadow);transform:translateY(-130%);opacity:0;transition:transform 0.4s var(--ease), opacity 0.3s ease;}
+    .nav-links.open{transform:translateY(0);opacity:1;}
+    nav ul{flex-direction:column;gap:1rem;}
+    .menu-toggle{display:flex;}
+    .grid-3,.grid-4{grid-template-columns:1fr;}
+    .moto-gallery{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .form-field.full{grid-column:span 1;}
+    .hero-stats{gap:1.4rem;flex-wrap:wrap;}
+    .contact-grid{grid-template-columns:1fr;}
+    .footer-top{flex-direction:column;}
+  }
 </style>
 </head>
 <body>
 
-<header id="header">
+<header id="siteHeader">
+  <a href="#top" class="logo">
+    <div class="logo-badge"><span>N</span></div>
+    <div class="logo-text">Naimas<small>Motor &amp; Custom Co.</small></div>
+  </a>
   <nav>
-    <a href="#home" class="logo"><span class="logo-mark">NM</span> Naima Mahdi</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact" class="nav-cta">Join a Class</a></li>
-    </ul>
-    <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#bmw">Custom BMW</a></li>
+        <li><a href="#mercedes">Mercedes</a></li>
+        <li><a href="#moto">Motorcycles</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
+  <a href="#order" class="nav-cta">Place an Order</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<section class="hero" id="top">
   <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="eyebrow">Forex Trader · Founder, Naima's School</span>
-      <h1>Trading the markets. <span class="accent">Teaching the next generation.</span></h1>
-      <p>I'm Naima Mahdi — a forex trader with 6 years in the markets, and founder of Naima's School, where I teach Somali girls and women forex and general trading concepts, from candlestick patterns to full trading strategies.</p>
-      <div class="hero-cta">
-        <a href="#courses" class="btn btn-primary">
-          Explore My Courses
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Naimas Company · Est. Garage Floor</div>
+      <h1>Cars, tuned to<br><em>your</em> obsession.</h1>
+      <p class="lede">From factory-fresh imports to one-off custom builds — Naimas hand-finishes every BMW, Mercedes, and motorcycle that leaves our floor. Pick a build sheet, place your order, drive it out.</p>
+      <div class="hero-actions">
+        <a href="#order" class="btn btn-primary">
+          Start Your Order
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a href="#" class="btn btn-outline" id="cvBtn" download="Naima-Mahdi-CV.pdf">
-          Download CV
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-        </a>
+        <a href="#featured" class="btn btn-outline">Browse the Floor</a>
       </div>
-      <div class="hero-socials">
-        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.41.21 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.01 10.01 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Dribbble"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.6 4.6a8.4 8.4 0 0 1 1.9 5.2c-.28-.06-3.06-.62-5.86-.27-.06-.15-.12-.3-.19-.46-.17-.4-.36-.8-.55-1.19 3.1-1.27 4.5-3.08 4.7-3.28zm-1.16-1.12c-.18.24-1.44 1.92-4.42 3.06-1.38-2.53-2.9-4.6-3.14-4.92a8.42 8.42 0 0 1 7.56 1.86zM8.62 3.94c.23.31 1.72 2.36 3.12 4.83-3.94 1.05-7.42 1.03-7.79 1.03A8.45 8.45 0 0 1 8.62 3.94zM3.6 12.02v-.28c.36.01 4.43.06 8.63-1.2.24.47.47.94.68 1.42-.11.03-.22.06-.33.1-4.35 1.4-6.67 5.24-6.86 5.56a8.36 8.36 0 0 1-2.12-5.6zm3.14 6.66c.15-.26 1.94-3.66 5.86-5 .02-.01.03-.01.05-.02 1.14 2.9 1.6 5.32 1.72 6.02a8.4 8.4 0 0 1-7.63-1zm9.24.06c-.09-.55-.51-2.8-1.57-5.65 2.64-.42 4.95.27 5.24.36a8.44 8.44 0 0 1-3.67 5.29z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.3 8.35L23 22h-6.9l-5.4-6.98L4.5 22H1.4l7.8-8.92L1 2h7.1l4.9 6.4L18.9 2zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20z"/></svg></a>
+      <div class="hero-stats">
+        <div><strong>412+</strong><span>CARS DELIVERED</span></div>
+        <div><strong>18 YRS</strong><span>ON THE FLOOR</span></div>
+        <div><strong>4.9 / 5</strong><span>CUSTOMER RATING</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="portrait-ring">
-        <div class="portrait-frame">
-          <!-- Replace this illustrated placeholder with your own photo:
-               <img src="your-photo.jpg" alt="Naima Mahdi"> -->
-          <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portrait placeholder for Naima Mahdi">
-            <defs>
-              <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#f4d9c6"/>
-                <stop offset="100%" stop-color="#eccbb4"/>
-              </linearGradient>
-              <linearGradient id="hijab" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#1c2534"/>
-                <stop offset="100%" stop-color="#0a1a33"/>
-              </linearGradient>
-              <linearGradient id="bgc" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#dce8fb"/>
-                <stop offset="100%" stop-color="#eef4fd"/>
-              </linearGradient>
-            </defs>
-            <rect width="340" height="340" fill="url(#bgc)"/>
-            <!-- shoulders / hijab drape -->
-            <path d="M40 340 C40 250 95 205 170 205 C245 205 300 250 300 340 Z" fill="url(#hijab)"/>
-            <!-- neck -->
-            <rect x="150" y="185" width="40" height="45" fill="url(#skin)"/>
-            <!-- face -->
-            <ellipse cx="170" cy="150" rx="62" ry="72" fill="url(#skin)"/>
-            <!-- hijab covering head, framing face -->
-            <path d="M95 150 C95 75 130 30 170 30 C210 30 245 75 245 150 C245 175 235 190 222 198 C230 150 215 90 170 85 C125 90 110 150 118 198 C105 190 95 175 95 150 Z" fill="url(#hijab)"/>
-            <path d="M100 165 C90 210 95 270 100 300 L60 300 C58 240 68 195 100 165 Z" fill="url(#hijab)"/>
-            <path d="M240 165 C250 210 245 270 240 300 L280 300 C282 240 272 195 240 165 Z" fill="url(#hijab)"/>
-            <!-- eyebrows -->
-            <path d="M138 138 Q150 130 163 137" stroke="#3a2a22" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <path d="M178 137 Q191 130 203 138" stroke="#3a2a22" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-            <!-- eyes -->
-            <ellipse cx="150" cy="150" rx="7" ry="4.5" fill="#2a1c14"/>
-            <ellipse cx="191" cy="150" rx="7" ry="4.5" fill="#2a1c14"/>
-            <!-- nose -->
-            <path d="M170 148 C168 160 165 168 170 172 C174 168 172 160 170 148 Z" fill="#e0b7a0" opacity="0.6"/>
-            <!-- nose ring -->
-            <circle cx="177" cy="172" r="4" fill="none" stroke="#c9a13a" stroke-width="2"/>
-            <!-- lips -->
-            <path d="M155 188 Q170 196 185 188 Q170 200 155 188 Z" fill="#b9695f"/>
-            <!-- cheeks blush -->
-            <ellipse cx="138" cy="168" rx="10" ry="6" fill="#e8a892" opacity="0.35"/>
-            <ellipse cx="203" cy="168" rx="10" ry="6" fill="#e8a892" opacity="0.35"/>
-          </svg>
-        </div>
+    <div class="hero-visual reveal-scale">
+      <div class="ticket-frame frame-main">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop" alt="Custom pink and cream tuned BMW coupe on the showroom floor">
       </div>
-      <div class="badge-float badge-1"><span class="badge-dot"></span>Founder, Naima's School</div>
-      <div class="badge-float badge-2"><span class="badge-dot"></span>6 yrs trading experience</div>
+      <div class="ticket-frame frame-second">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=900&auto=format&fit=crop" alt="Mercedes sedan detail shot in warm garage light">
+      </div>
+      <div class="badge-float"><div class="dot"></div><span>BUILD #0412 · READY</span></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section-pad" id="about">
-  <div class="container">
-    <div class="about-grid reveal">
-      <div class="about-visual">
-        <div class="about-stat"><strong>6+</strong><span>Years trading the markets</span></div>
-        <div class="about-stat"><strong>500+</strong><span>Students taught</span></div>
-        <div class="about-stat"><strong>1</strong><span>School built from scratch</span></div>
-      </div>
-      <div class="about-body">
-        <span class="eyebrow">About Me</span>
-        <h2 style="font-size:clamp(26px,3vw,34px);color:var(--navy);margin-bottom:18px;">Where the charts meet the classroom</h2>
-        <p>I'm a <strong>forex trader with 6 years of experience</strong> reading price action, managing risk, and navigating the currency markets. Over the years, trading stopped being just my job — it became something I wanted to hand down.</p>
-        <p>That's why I founded <strong>Naima's School</strong>, a learning space where I teach fellow Somali girls and women forex and general trading concepts — from reading candlestick charts to building a full trading strategy and managing risk like a professional.</p>
-        <p>When I'm not analyzing charts, I'm building lessons, running live classes, and watching my students place their first confident trades.</p>
-        <div class="about-tags">
-          <span class="tag">Risk Management</span>
-          <span class="tag">Technical Analysis</span>
-          <span class="tag">Mentorship</span>
-          <span class="tag">Community Building</span>
-        </div>
-      </div>
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>BMW <em>CUSTOM SHOP</em></span><span>MERCEDES <em>DETAIL BAY</em></span><span>MOTORCYCLE <em>FAB STUDIO</em></span><span>FINANCING <em>AVAILABLE</em></span><span>NATIONWIDE <em>DELIVERY</em></span>
+    <span>BMW <em>CUSTOM SHOP</em></span><span>MERCEDES <em>DETAIL BAY</em></span><span>MOTORCYCLE <em>FAB STUDIO</em></span><span>FINANCING <em>AVAILABLE</em></span><span>NATIONWIDE <em>DELIVERY</em></span>
+  </div>
+</div>
+
+<section class="about section-pad" id="about">
+  <div class="container about-grid">
+    <div class="about-gallery reveal-scale">
+      <img class="ag-1" src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=900&auto=format&fit=crop" alt="Naimas mechanic working under the hood">
+      <img class="ag-2" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800&auto=format&fit=crop" alt="Close up of chrome trim on a customized car">
+    </div>
+    <div class="about-copy reveal">
+      <span class="stamp">Who We Are</span>
+      <h2>A family garage that grew into the region's custom-build address.</h2>
+      <p>Naimas Company started as a two-bay repair shop and became the place people bring their BMWs, Mercedes, and motorcycles when they want something the factory didn't offer. Every order runs through the same floor: strip, spec, build, detail, deliver.</p>
+      <ul class="about-list">
+        <li>In-house paint &amp; upholstery studio</li>
+        <li>Certified BMW &amp; Mercedes technicians</li>
+        <li>Motorcycle fabrication bay</li>
+        <li>Transparent, itemized pricing</li>
+      </ul>
+      <a href="#order" class="btn btn-primary" style="margin-top:2.2rem;">
+        Book a Consultation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- CLASSROOM BANNER -->
-<section class="classroom-banner">
-  <div class="container classroom-grid">
-    <div class="classroom-text reveal">
-      <span class="eyebrow">Inside Naima's School</span>
-      <h2 style="font-size:clamp(24px,3vw,32px);color:var(--navy);margin-bottom:14px;">Real charts. Real classes. Real trades.</h2>
-      <p style="color:var(--ink-soft);font-size:16px;">Every class starts with the chart on the screen — reading candlestick patterns, marking support and resistance, and walking through live setups together. Students leave each session with a strategy they actually understand, not just a rule to memorize.</p>
-    </div>
-    <div class="classroom-visual reveal">
-      <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a trading class with a candlestick chart on a whiteboard and students seated in front">
-        <defs>
-          <linearGradient id="roomBg" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#eef4fd"/>
-            <stop offset="100%" stop-color="#dce8fb"/>
-          </linearGradient>
-          <linearGradient id="boardGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#0a1a33"/>
-            <stop offset="100%" stop-color="#12294f"/>
-          </linearGradient>
-        </defs>
-        <rect width="480" height="320" rx="20" fill="url(#roomBg)"/>
-
-        <!-- whiteboard / screen -->
-        <rect x="60" y="34" width="360" height="150" rx="10" fill="url(#boardGrad)"/>
-        <rect x="60" y="34" width="360" height="150" rx="10" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.4"/>
-
-        <!-- candlestick chart on board -->
-        <g stroke-width="2.5">
-          <line x1="90" y1="90" x2="90" y2="150" stroke="#3b82f6"/>
-          <rect x="84" y="112" width="12" height="26" fill="#3b82f6"/>
-
-          <line x1="120" y1="70" x2="120" y2="120" stroke="#06b6d4"/>
-          <rect x="114" y="78" width="12" height="24" fill="none" stroke="#06b6d4"/>
-
-          <line x1="150" y1="100" x2="150" y2="160" stroke="#3b82f6"/>
-          <rect x="144" y="128" width="12" height="24" fill="#3b82f6"/>
-
-          <line x1="180" y1="60" x2="180" y2="110" stroke="#06b6d4"/>
-          <rect x="174" y="68" width="12" height="26" fill="none" stroke="#06b6d4"/>
-
-          <line x1="210" y1="85" x2="210" y2="145" stroke="#3b82f6"/>
-          <rect x="204" y="108" width="12" height="26" fill="#3b82f6"/>
-
-          <line x1="240" y1="55" x2="240" y2="105" stroke="#06b6d4"/>
-          <rect x="234" y="62" width="12" height="26" fill="none" stroke="#06b6d4"/>
-
-          <line x1="270" y1="95" x2="270" y2="155" stroke="#3b82f6"/>
-          <rect x="264" y="118" width="12" height="26" fill="#3b82f6"/>
-
-          <line x1="300" y1="65" x2="300" y2="115" stroke="#06b6d4"/>
-          <rect x="294" y="72" width="12" height="26" fill="none" stroke="#06b6d4"/>
-
-          <line x1="330" y1="90" x2="330" y2="150" stroke="#3b82f6"/>
-          <rect x="324" y="112" width="12" height="26" fill="#3b82f6"/>
-
-          <line x1="360" y1="60" x2="360" y2="112" stroke="#06b6d4"/>
-          <rect x="354" y="68" width="12" height="26" fill="none" stroke="#06b6d4"/>
-        </g>
-        <polyline points="90,130 120,95 150,140 180,88 210,120 240,80 270,132 300,90 330,128 360,85" fill="none" stroke="#f5f8fc" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
-        <text x="76" y="52" font-family="JetBrains Mono, monospace" font-size="12" fill="#9db4dd">EUR/USD · Candlestick Patterns</text>
-
-        <!-- desk -->
-        <rect x="40" y="230" width="400" height="14" rx="4" fill="#c7d7f2"/>
-
-        <!-- students (stylized hijab silhouettes, seated at desk) -->
-        <g>
-          <ellipse cx="120" cy="205" rx="26" ry="30" fill="#0a1a33"/>
-          <ellipse cx="120" cy="196" rx="17" ry="19" fill="#eccbb4"/>
-          <path d="M103 196c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#0a1a33"/>
-        </g>
-        <g>
-          <ellipse cx="200" cy="210" rx="26" ry="30" fill="#12294f"/>
-          <ellipse cx="200" cy="201" rx="17" ry="19" fill="#f4d9c6"/>
-          <path d="M183 201c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#12294f"/>
-        </g>
-        <g>
-          <ellipse cx="280" cy="204" rx="26" ry="30" fill="#0a1a33"/>
-          <ellipse cx="280" cy="195" rx="17" ry="19" fill="#eccbb4"/>
-          <path d="M263 195c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#0a1a33"/>
-        </g>
-        <g>
-          <ellipse cx="360" cy="209" rx="26" ry="30" fill="#12294f"/>
-          <ellipse cx="360" cy="200" rx="17" ry="19" fill="#f4d9c6"/>
-          <path d="M343 200c0-20 8-34 17-34s17 14 17 34c0 8-4 13-9 15 3-16-2-30-8-32-6 2-11 16-8 32-5-2-9-7-9-15z" fill="#12294f"/>
-        </g>
-
-        <!-- laptops on desk -->
-        <rect x="100" y="222" width="30" height="10" rx="2" fill="#2563eb" opacity="0.6"/>
-        <rect x="180" y="222" width="30" height="10" rx="2" fill="#06b6d4" opacity="0.6"/>
-        <rect x="260" y="222" width="30" height="10" rx="2" fill="#2563eb" opacity="0.6"/>
-        <rect x="340" y="222" width="30" height="10" rx="2" fill="#06b6d4" opacity="0.6"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section-pad bg-off" id="skills">
+<section class="featured section-pad" id="featured">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Skills</span>
-      <h2>What I bring to the table</h2>
-      <p>A dual toolkit — years of hands-on market experience paired with the patience to teach it — so every student walks away with skills they can actually use.</p>
+      <div class="eyebrow">Off The Floor Today</div>
+      <h2>Featured Products</h2>
+      <p>Ready-to-order builds fresh from the Naimas floor this week — each one comes with a full build sheet.</p>
     </div>
-    <div class="skills-grid reveal">
-      <div class="skill-card">
-        <h3><span class="dot"></span>Trading</h3>
-        <div class="skill-row"><div class="skill-label"><span>Candlestick Pattern Reading</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Technical Analysis</span><span>93%</span></div><div class="skill-bar"><div class="skill-fill" data-width="93"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Risk & Money Management</span><span>96%</span></div><div class="skill-bar"><div class="skill-fill" data-width="96"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Price Action Strategy</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Trading Psychology</span><span>88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
-      </div>
-      <div class="skill-card">
-        <h3><span class="dot" style="background:var(--cyan)"></span>Teaching</h3>
-        <div class="skill-row"><div class="skill-label"><span>Curriculum Design</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Live Class Facilitation</span><span>94%</span></div><div class="skill-bar"><div class="skill-fill" data-width="94"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Mentorship</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Community Building</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-        <div class="skill-row"><div class="skill-label"><span>Public Speaking</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
-      </div>
+    <div class="grid-3">
+      <article class="ticket reveal">
+        <div class="ticket-perf"></div>
+        <div class="ticket-photo">
+          <span class="ticket-tag">Sedan</span>
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" alt="Cream and brown customized sedan">
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-row"><h3>The Copperline Sedan</h3><span class="ticket-price">$38,400</span></div>
+          <p>Two-tone cream and copper wrap, hand-stitched cognac interior, remapped 6-cylinder.</p>
+          <div class="ticket-specs"><span>310 HP</span><span>Auto</span><span>4 Seats</span></div>
+          <a href="#order" class="ticket-cta">Order this build <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="ticket reveal">
+        <div class="ticket-perf"></div>
+        <div class="ticket-photo">
+          <span class="ticket-tag">Coupe</span>
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop" alt="Rose pink customized coupe">
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-row"><h3>The Blush Coupe</h3><span class="ticket-price">$44,900</span></div>
+          <p>Matte blush pink body, forged 19" wheels, carbon splitter, sport exhaust note tuning.</p>
+          <div class="ticket-specs"><span>402 HP</span><span>Manual</span><span>2 Seats</span></div>
+          <a href="#order" class="ticket-cta">Order this build <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="ticket reveal">
+        <div class="ticket-perf"></div>
+        <div class="ticket-photo">
+          <span class="ticket-tag">Cruiser</span>
+          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800&auto=format&fit=crop" alt="Brown leather custom motorcycle cruiser">
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-row"><h3>The Sienna Cruiser</h3><span class="ticket-price">$16,750</span></div>
+          <p>Saddle-brown leather seat, brass detailing, bobber tail, hand-painted cream tank.</p>
+          <div class="ticket-specs"><span>96 HP</span><span>V-Twin</span><span>2 Seats</span></div>
+          <a href="#order" class="ticket-cta">Order this build <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- COURSES -->
-<section class="section-pad" id="courses">
+<section class="split bmw-band" id="bmw">
+  <div class="split-media reveal-scale">
+    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop" alt="Custom BMW in the Naimas paint bay">
+    <div class="split-caption"><div class="eyebrow">Naimas Custom BMW</div></div>
+  </div>
+  <div class="split-copy reveal">
+    <div class="eyebrow">Bay 01</div>
+    <h2>Custom BMW builds, spec'd to the last stitch.</h2>
+    <p>Our BMW bay handles everything from a subtle cream respray to a full engine remap and widebody kit. Every build starts with a sit-down where we translate your reference photos into a real parts list.</p>
+    <div class="spec-strip">
+      <div><strong>2–6</strong><span>Weeks / Build</span></div>
+      <div><strong>140+</strong><span>Parts Catalogued</span></div>
+      <div><strong>5 Yr</strong><span>Paint Warranty</span></div>
+    </div>
+    <a href="#order" class="btn btn-primary">Design My BMW <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<section class="split reverse merc-band" id="mercedes">
+  <div class="split-copy reveal">
+    <div class="eyebrow">Bay 02</div>
+    <h2>Mercedes, finished the way the badge deserves.</h2>
+    <p>Naimas' Mercedes bay focuses on quiet luxury: nappa leather re-trims, ambient lighting retrofits, and factory-grade panel gaps. Nothing loud — just correct, down to the millimetre.</p>
+    <div class="spec-strip">
+      <div><strong>98%</strong><span>OEM-Match Paint</span></div>
+      <div><strong>60+</strong><span>Leather Tones</span></div>
+      <div><strong>3 Yr</strong><span>Interior Warranty</span></div>
+    </div>
+    <a href="#order" class="btn btn-primary">Design My Mercedes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>
+  <div class="split-media reveal-scale">
+    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1200&auto=format&fit=crop" alt="Mercedes sedan interior detail with cream leather">
+    <div class="split-caption"><div class="eyebrow">Naimas Mercedes Studio</div></div>
+  </div>
+</section>
+
+<section class="section-pad moto-band" id="moto">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Naima's School</span>
-      <h2>Courses & programs</h2>
-      <p>From your very first candlestick to a full trading strategy — each program is built to take students from the classroom to their own charts, with confidence.</p>
+      <div class="eyebrow">Bay 03 · Fabrication</div>
+      <h2>Motorcycles built by hand, not by catalogue.</h2>
+      <p>Our fabrication bay turns stock cruisers and standards into one-off machines — brass trim, hand-tooled leather, tanks painted in-house.</p>
     </div>
-    <div class="project-grid reveal">
-
-      <div class="project-card">
-        <div class="project-thumb pt-1">
-          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="18" x2="8" y2="52" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="30" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="10" x2="24" y2="40" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="14" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="24" x2="40" y2="58" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="38" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="8" x2="56" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="12" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="20" x2="72" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="30" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="16" x2="104" y2="46" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="26" width="8" height="16" fill="rgba(255,255,255,0.95)"/><polyline points="8,44 24,22 40,44 56,20 72,38 88,18 104,32" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
-        </div>
-        <div class="project-body">
-          <div class="project-tagrow"><span>Beginner</span><span>4 weeks</span></div>
-          <h3>Candlestick Patterns Masterclass</h3>
-          <p>Learn to read candlesticks with confidence — reversal patterns, continuation patterns, and how to spot them live on the chart.</p>
-          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb pt-2">
-          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="30" x2="8" y2="56" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="40" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="20" x2="24" y2="48" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="26" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="10" x2="40" y2="38" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="16" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="4" x2="56" y2="28" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="8" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="14" x2="72" y2="40" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="20" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="2" x2="104" y2="24" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="6" width="8" height="12" fill="rgba(255,255,255,0.95)"/><polyline points="8,48 24,34 40,24 56,16 72,26 88,18 104,12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
-        </div>
-        <div class="project-body">
-          <div class="project-tagrow"><span>Intermediate</span><span>6 weeks</span></div>
-          <h3>Price Action Trading Strategy</h3>
-          <p>Build a complete strategy around support, resistance, and trend structure — and learn to trust your own analysis.</p>
-          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb pt-3">
-          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="14" x2="8" y2="42" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="4" y="18" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="24" y1="24" x2="24" y2="54" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="20" y="36" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="40" y1="12" x2="40" y2="40" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="36" y="16" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="56" y1="26" x2="56" y2="56" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="52" y="38" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="72" y1="10" x2="72" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="68" y="14" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="88" y1="22" x2="88" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="84" y="32" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="104" y1="8" x2="104" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="100" y="12" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><polyline points="8,28 24,40 40,26 56,42 72,22 88,36 104,20" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
-        </div>
-        <div class="project-body">
-          <div class="project-tagrow"><span>All levels</span><span>3 weeks</span></div>
-          <h3>Risk & Money Management</h3>
-          <p>Position sizing, stop-loss placement, and protecting your account — the discipline that separates traders who last.</p>
-          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb pt-4">
-          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="20" x2="8" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="32" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="8" x2="24" y2="34" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="12" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="26" x2="40" y2="54" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="36" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="12" x2="56" y2="38" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="16" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="24" x2="72" y2="52" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="34" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="18" x2="104" y2="46" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="28" width="8" height="16" fill="rgba(255,255,255,0.95)"/><polyline points="8,40 24,20 40,44 56,24 72,42 88,16 104,36" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
-        </div>
-        <div class="project-body">
-          <div class="project-tagrow"><span>Beginner</span><span>Cohort</span></div>
-          <h3>Forex Fundamentals for Beginners</h3>
-          <p>A ground-up introduction to the forex market, currency pairs, and how to open and read your first chart.</p>
-          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb pt-5">
-          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="10" x2="8" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="4" y="14" width="8" height="16" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="24" y1="26" x2="24" y2="56" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="20" y="38" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="40" y1="8" x2="40" y2="32" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="36" y="12" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="56" y1="22" x2="56" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="52" y="32" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="72" y1="6" x2="72" y2="28" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="68" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="88" y1="18" x2="88" y2="44" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="84" y="26" width="8" height="16" fill="rgba(255,255,255,0.95)"/><line x1="104" y1="4" x2="104" y2="24" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="100" y="8" width="8" height="12" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><polyline points="8,22 24,46 40,20 56,40 72,16 88,32 104,12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
-        </div>
-        <div class="project-body">
-          <div class="project-tagrow"><span>Intermediate</span><span>2 weeks</span></div>
-          <h3>Trading Psychology Workshop</h3>
-          <p>Discipline, patience, and emotional control — the mindset work that keeps a strategy working under pressure.</p>
-          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-thumb pt-6">
-          <svg viewBox="0 0 112 64" width="96" height="56"><line x1="8" y1="24" x2="8" y2="50" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="4" y="34" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="24" y1="12" x2="24" y2="38" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="20" y="16" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="40" y1="28" x2="40" y2="54" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="36" y="38" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="56" y1="10" x2="56" y2="34" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="52" y="14" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="72" y1="20" x2="72" y2="46" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="68" y="30" width="8" height="14" fill="rgba(255,255,255,0.95)"/><line x1="88" y1="6" x2="88" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><rect x="84" y="10" width="8" height="14" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><line x1="104" y1="16" x2="104" y2="42" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><rect x="100" y="26" width="8" height="14" fill="rgba(255,255,255,0.95)"/><polyline points="8,42 24,24 40,44 56,20 72,34 88,16 104,30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
-        </div>
-        <div class="project-body">
-          <div class="project-tagrow"><span>Advanced</span><span>Ongoing</span></div>
-          <h3>Live Trading Mentorship</h3>
-          <p>Small-group mentorship with live market sessions — apply everything you've learned with feedback in real time.</p>
-          <a href="#contact" class="project-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-      </div>
-
+    <div class="moto-gallery">
+      <figure class="reveal-scale"><img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop" alt="Custom brown leather seat motorcycle"><figcaption>Bobber · Brass Trim</figcaption></figure>
+      <figure class="reveal-scale"><img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=800&auto=format&fit=crop" alt="Cream tank custom motorcycle in workshop"><figcaption>Scrambler · Cream Tank</figcaption></figure>
+      <figure class="reveal-scale"><img src="https://images.unsplash.com/photo-1601517990796-8ff03b0a06c4?q=80&w=800&auto=format&fit=crop" alt="Pink accent custom motorcycle detail"><figcaption>Cafe Racer · Blush Trim</figcaption></figure>
+    </div>
+    <div style="margin-top:2.4rem;text-align:center;">
+      <a href="#order" class="btn btn-outline">Start My Motorcycle Build <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="section-pad bg-off" id="experience">
-  <div class="container">
-    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
-      <span class="eyebrow" style="justify-content:center;">Experience</span>
-      <h2>My journey in the markets</h2>
-      <p style="margin-left:auto;margin-right:auto;">Six years of trading experience, built step by step into a school for the next generation of traders.</p>
-    </div>
-    <div class="timeline reveal">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <span class="period">2024 — Present</span>
-        <h3>Founder & Lead Trainer</h3>
-        <span class="org">Naima's School</span>
-        <p>Built a trading education program for Somali girls and women from the ground up — designing the curriculum, teaching live classes, and mentoring students from their first candlestick to their first strategy.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <span class="period">2022 — 2024</span>
-        <h3>Independent Forex Trader</h3>
-        <span class="org">Self-Employed</span>
-        <p>Traded major and minor currency pairs full-time, refining a price-action based strategy and a disciplined risk management approach.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <span class="period">2019 — 2022</span>
-        <h3>Junior Trader</h3>
-        <span class="org">Self-Taught, Mentored Path</span>
-        <p>Learned the fundamentals of forex trading — chart reading, candlestick patterns, and risk control — while building the account and the discipline to trade full-time.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="section-pad" id="education">
+<section class="pricing section-pad" id="pricing">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Education</span>
-      <h2>Learning background</h2>
-      <p>The foundation behind the strategy and the classroom.</p>
+      <div class="eyebrow">Build Sheets</div>
+      <h2>Pricing</h2>
+      <p>Three starting points. Every build is quoted exactly once we've reviewed your spec — no surprise line items.</p>
     </div>
-    <div class="edu-grid reveal">
-      <div class="edu-card">
-        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
-        <div>
-          <span class="period">2015 — 2019</span>
-          <h3>B.Com. Finance</h3>
-          <p>University of Nairobi — Focused on financial markets, economics, and business fundamentals.</p>
-        </div>
+    <div class="grid-3">
+      <div class="price-card reveal">
+        <span class="plan-name">Refresh</span>
+        <h3>Detail &amp; Refresh</h3>
+        <div class="amount"><b>$1,200</b><span>/ starting</span></div>
+        <ul>
+          <li>Full interior &amp; exterior detail</li>
+          <li>Paint correction, single stage</li>
+          <li>Minor trim &amp; upholstery repair</li>
+          <li>48-hour turnaround</li>
+        </ul>
+        <a href="#order" class="btn btn-outline">Choose Refresh</a>
       </div>
-      <div class="edu-card">
-        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
-        <div>
-          <span class="period">2020</span>
-          <h3>Technical Analysis Certification</h3>
-          <p>Online Trading Academy — In-depth study of chart patterns, indicators, and candlestick analysis.</p>
-        </div>
+      <div class="price-card featured reveal">
+        <span class="ribbon">Most Ordered</span>
+        <span class="plan-name">Custom Build</span>
+        <h3>Full Custom Build</h3>
+        <div class="amount"><b>$9,500</b><span>/ starting</span></div>
+        <ul>
+          <li>Full respray, any colour on the wheel</li>
+          <li>Interior re-trim, leather or suede</li>
+          <li>Wheel &amp; suspension package</li>
+          <li>Engine tune consultation included</li>
+        </ul>
+        <a href="#order" class="btn btn-primary">Choose Custom Build</a>
       </div>
-      <div class="edu-card">
-        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg></div>
-        <div>
-          <span class="period">2021</span>
-          <h3>Forex Trading Diploma</h3>
-          <p>FX Institute — Comprehensive coursework in currency markets, strategy building, and trade execution.</p>
-        </div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
-        <div>
-          <span class="period">2023</span>
-          <h3>Risk Management & Trading Psychology</h3>
-          <p>Independent study — Specialized training in position sizing, capital preservation, and trading discipline.</p>
-        </div>
+      <div class="price-card reveal">
+        <span class="plan-name">Signature</span>
+        <h3>Signature One-Off</h3>
+        <div class="amount"><b>Quote</b><span>/ bespoke</span></div>
+        <ul>
+          <li>Ground-up rebuild, any make</li>
+          <li>Bespoke fabrication &amp; badging</li>
+          <li>Dedicated build manager</li>
+          <li>Delivery event on completion</li>
+        </ul>
+        <a href="#order" class="btn btn-outline">Request Quote</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section-pad bg-off" id="testimonials">
+<section class="testimonials section-pad" id="testimonials">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Testimonials</span>
-      <h2>What my students say</h2>
-      <p>Feedback from students of Naima's School who've built real trading skills, one class at a time.</p>
+      <div class="eyebrow">From The Floor</div>
+      <h2>Customer Testimonials</h2>
+      <p>A few words from people who picked up their build this year.</p>
     </div>
-    <div class="testi-grid reveal">
-      <div class="testi-card">
-        <div class="testi-quote">"</div>
-        <p>Before Naima's School, candlestick charts looked like noise to me. Now I can read a setup with confidence. Naima explains everything so patiently.</p>
-        <div class="testi-person">
-          <div class="testi-avatar">AH</div>
-          <div><strong>Amina Hassan</strong><span>Student, Candlestick Patterns Masterclass</span></div>
+    <div class="test-track">
+      <div class="test-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
         </div>
+        <p>"They took my tired 3-series and gave it back with a cream and copper interior I still can't believe is the same car. The build sheet made every choice clear upfront."</p>
+        <div class="test-person"><div class="test-avatar">A</div><div><strong>Amara O.</strong><span>BMW 3-Series Custom</span></div></div>
       </div>
-      <div class="testi-card">
-        <div class="testi-quote">"</div>
-        <p>The risk management class alone changed how I trade. I finally understand position sizing and why protecting my account matters more than chasing every trade.</p>
-        <div class="testi-person">
-          <div class="testi-avatar">HM</div>
-          <div><strong>Hodan Mohamed</strong><span>Student, Risk & Money Management</span></div>
+      <div class="test-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
         </div>
+        <p>"Ordered the Mercedes interior re-trim online and got weekly photo updates from the bay. Panel gaps look factory. Worth every shilling."</p>
+        <div class="test-person"><div class="test-avatar">D</div><div><strong>David K.</strong><span>Mercedes E-Class Refresh</span></div></div>
       </div>
-      <div class="testi-card">
-        <div class="testi-quote">"</div>
-        <p>Learning forex from a fellow Somali woman made all the difference — I felt comfortable asking questions I would never have asked elsewhere.</p>
-        <div class="testi-person">
-          <div class="testi-avatar">SK</div>
-          <div><strong>Sara Keinan</strong><span>Student, Live Trading Mentorship</span></div>
+      <div class="test-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
         </div>
+        <p>"The fabrication bay built my cafe racer from a stock standard bike. Brass trim and the blush tank turned out better than my sketches."</p>
+        <div class="test-person"><div class="test-avatar">L</div><div><strong>Lindiwe M.</strong><span>Custom Cafe Racer</span></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p>"Signature One-Off sounded expensive until I saw the itemised sheet. Every shilling was accounted for and the delivery day felt like an event."</p>
+        <div class="test-person"><div class="test-avatar">S</div><div><strong>Samuel W.</strong><span>Signature Sedan Build</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section-pad" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-info reveal">
-      <span class="eyebrow">Contact</span>
-      <h2>Let's get you trading</h2>
-      <p>Want to join a class at Naima's School, or have a question about a course? My inbox is always open — I try to reply within a day or two.</p>
-
-      <div class="contact-detail">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></div>
-        <div><strong>Email</strong><span>hello@naimamahdi.com</span></div>
-      </div>
-      <div class="contact-detail">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .6 3a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c1 .3 2 .5 3 .6a2 2 0 011.7 2z"/></svg></div>
-        <div><strong>Phone</strong><span>+254 700 000 000</span></div>
-      </div>
-      <div class="contact-detail">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><strong>Location</strong><span>Nairobi, Kenya — classes held online</span></div>
-      </div>
-
-      <div class="contact-socials">
-        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.41.21 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.6.69.5A10.01 10.01 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/></svg></a>
-        <a href="#" class="social-icon" aria-label="Dribbble"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.6 4.6a8.4 8.4 0 0 1 1.9 5.2c-.28-.06-3.06-.62-5.86-.27-.06-.15-.12-.3-.19-.46-.17-.4-.36-.8-.55-1.19 3.1-1.27 4.5-3.08 4.7-3.28zm-1.16-1.12c-.18.24-1.44 1.92-4.42 3.06-1.38-2.53-2.9-4.6-3.14-4.92a8.42 8.42 0 0 1 7.56 1.86zM8.62 3.94c.23.31 1.72 2.36 3.12 4.83-3.94 1.05-7.42 1.03-7.79 1.03A8.45 8.45 0 0 1 8.62 3.94zM3.6 12.02v-.28c.36.01 4.43.06 8.63-1.2.24.47.47.94.68 1.42-.11.03-.22.06-.33.1-4.35 1.4-6.67 5.24-6.86 5.56a8.36 8.36 0 0 1-2.12-5.6zm3.14 6.66c.15-.26 1.94-3.66 5.86-5 .02-.01.03-.01.05-.02 1.14 2.9 1.6 5.32 1.72 6.02a8.4 8.4 0 0 1-7.63-1zm9.24.06c-.09-.55-.51-2.8-1.57-5.65 2.64-.42 4.95.27 5.24.36a8.44 8.44 0 0 1-3.67 5.29z"/></svg></a>
+<section class="orders section-pad" id="order">
+  <div class="container orders-grid">
+    <div class="reveal">
+      <div class="eyebrow">Online Orders</div>
+      <h2>Place your order from anywhere. We'll call within 24 hours.</h2>
+      <p class="lede">Choose a build, tell us your specs, and our floor manager will confirm timeline and pricing before anything touches the bay.</p>
+      <div class="order-steps">
+        <div><div class="num">1</div><div><strong>Submit your build sheet</strong><span>Vehicle, budget, and the look you're after.</span></div></div>
+        <div><div class="num">2</div><div><strong>Get a confirmed quote</strong><span>Our team responds within one business day.</span></div></div>
+        <div><div class="num">3</div><div><strong>Drop off or door-to-door pickup</strong><span>We collect the car or bike from your address.</span></div></div>
+        <div><div class="num">4</div><div><strong>Track the build</strong><span>Photo updates from the bay until delivery day.</span></div></div>
       </div>
     </div>
-
-    <form class="contact-form reveal" id="contactForm">
+    <form class="order-form reveal" onsubmit="return handleOrderSubmit(event)">
+      <h3>Request a Build Sheet</h3>
+      <p class="sub">No payment needed yet — this just starts your quote.</p>
       <div class="form-row">
-        <div class="field">
-          <label for="fname">Name</label>
-          <input type="text" id="fname" name="name" placeholder="Your full name" required>
+        <div class="form-field"><label for="fname">Full Name</label><input id="fname" type="text" placeholder="Jane Wanjiru" required></div>
+        <div class="form-field"><label for="fphone">Phone</label><input id="fphone" type="tel" placeholder="07xx xxx xxx" required></div>
+        <div class="form-field full"><label for="femail">Email</label><input id="femail" type="email" placeholder="you@email.com" required></div>
+        <div class="form-field full"><label for="fvehicle">Vehicle Type</label>
+          <select id="fvehicle">
+            <option>Custom BMW</option>
+            <option>Mercedes</option>
+            <option>Motorcycle</option>
+            <option>Other / Not sure yet</option>
+          </select>
         </div>
-        <div class="field">
-          <label for="femail">Email</label>
-          <input type="email" id="femail" name="email" placeholder="you@example.com" required>
-        </div>
+        <div class="form-field full"><label for="fnotes">Tell us about the build</label><textarea id="fnotes" rows="3" placeholder="Colours, finish, timeline..."></textarea></div>
       </div>
-      <div class="form-row">
-        <div class="field full">
-          <label for="fsubject">Subject</label>
-          <input type="text" id="fsubject" name="subject" placeholder="What's this about?" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="field full">
-          <label for="fmessage">Message</label>
-          <textarea id="fmessage" name="message" placeholder="Tell me about your project..." required></textarea>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary submit-btn">
-        Send Message
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      <button type="submit" class="btn btn-primary">
+        Submit Order Request
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </button>
-      <p class="form-note" id="formNote">I'll get back to you within 1–2 business days.</p>
+      <p class="form-note">By submitting, you agree to be contacted by the Naimas team about your build.</p>
     </form>
+  </div>
+</section>
+
+<section class="faq section-pad" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Good To Know</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>The questions we hear most before a build sheet gets submitted.</p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)"><h4>How long does a custom build take?</h4><span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Detail and refresh work is usually done in 48 hours. Full custom builds typically run 2–6 weeks depending on parts availability, and Signature One-Off builds are scoped individually with your build manager.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)"><h4>Do you work on cars other than BMW and Mercedes?</h4><span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Yes — BMW and Mercedes are our specialty bays, but our general floor and fabrication bay take on other makes and all motorcycles. Mention your vehicle in the build sheet and we'll confirm.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)"><h4>Can I order online without visiting first?</h4><span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Absolutely. Submit your build sheet online, and we'll confirm the quote and timeline by phone or email. Many customers only see the car in person on delivery day.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)"><h4>Do you offer financing or payment plans?</h4><span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Yes, custom builds over $5,000 can be split into milestone payments — deposit, mid-build, and delivery. Details are confirmed in your quote.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)"><h4>What warranty comes with a custom build?</h4><span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Paint work carries a 5-year warranty, interior re-trims carry 3 years, and all mechanical work is covered for 12 months or 20,000 km, whichever comes first.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact section-pad" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Reach The Floor</div>
+      <h2>Contact Information</h2>
+      <p>Come see a build in progress, or reach out before you submit your order.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2h-1C9.5 19 5 14.5 5 8V6z"/></svg></div>
+        <h4>Call the Floor</h4>
+        <p>+254 700 112 233<br>Mon–Sat, 8am–6pm</p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 7l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg></div>
+        <h4>Email Us</h4>
+        <p>orders@naimascompany.com<br>Replies within 24 hours</p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h4>Visit the Garage</h4>
+        <p>14 Jua Kali Lane, Industrial Area<br>Nairobi, Kenya</p>
+      </div>
+    </div>
+    <div class="contact-map reveal">
+      <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?q=80&w=1400&auto=format&fit=crop" alt="Aerial street map style view">
+      <div class="pin"><div class="pin-dot"></div><span>Naimas Company · Industrial Area</span></div>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
     <div class="footer-top">
-      <div class="footer-logo">Naima Mahdi · Naima's School</div>
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#courses">Courses</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-badge"><span>N</span></div>
+          <div class="logo-text">Naimas<small>Motor &amp; Custom Co.</small></div>
+        </div>
+        <p>Custom BMW, Mercedes, and motorcycle builds — spec'd, fabricated, and delivered from our floor to yours.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 9h3V6h-3a3 3 0 00-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 3v10.5a3.5 3.5 0 11-3-3.46M14 3a5 5 0 005 5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="#about">About Us</a>
+          <a href="#featured">Featured</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Reviews</a>
+        </div>
+        <div class="footer-col">
+          <h5>Bays</h5>
+          <a href="#bmw">Custom BMW</a>
+          <a href="#mercedes">Mercedes</a>
+          <a href="#moto">Motorcycles</a>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <a href="#faq">FAQ</a>
+          <a href="#order">Place an Order</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Naima Mahdi. All rights reserved.</span>
-      <span>Naima's School — trading education in Nairobi.</span>
+      <span>© 2026 Naimas Company. All rights reserved.</span>
+      <span>Built on the floor, in Nairobi.</span>
     </div>
   </div>
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Nav scroll shadow
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 10);
-});
-
-// Mobile menu
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('navLinks');
-burger.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-// Reveal on scroll + skill bar fill
-const revealEls = document.querySelectorAll('.reveal');
-const skillFills = document.querySelectorAll('.skill-fill');
-
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      if (entry.target.classList.contains('skills-grid')) {
-        skillFills.forEach(f => { f.style.width = f.dataset.width + '%'; });
-      }
-      io.unobserve(entry.target);
-    }
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
   });
-}, { threshold: 0.15 });
 
-revealEls.forEach(el => io.observe(el));
+  // mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-// Contact form (front-end only demo)
-const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  note.textContent = "Thanks! Your message has been noted — I'll reply soon.";
-  note.style.color = '#2563eb';
-  form.reset();
-});
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
 
-// CV button placeholder note
-document.getElementById('cvBtn').addEventListener('click', (e) => {
-  e.preventDefault();
-  alert('Add your CV file (e.g. Naima-Mahdi-CV.pdf) to this project folder and update the href/download attributes on this button to make it downloadable.');
-});
+  // faq accordion
+  function toggleFaq(btn){
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other => {
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!wasOpen){
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+
+  // order form
+  function handleOrderSubmit(e){
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const original = btn.innerHTML;
+    btn.innerHTML = 'Request Sent ✓';
+    btn.style.background = '#4caf6b';
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.style.background = '';
+      e.target.reset();
+    }, 2600);
+    return false;
+  }
 </script>
 
 </body>
